@@ -65,43 +65,38 @@ body {
     to { transform: translateX(-100%); }
   }
 
-/* Page 2: Center Cutout & Balanced Spacing */
+/* Page 2: Center Cutout & Balanced Spacing (Fully Responsive) */
 .cutout-wrapper-p2 {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 380px; /* Gap kam kiya taaki ek screen me fit aaye */
+  min-height: 450px;
   overflow: visible;
-  padding: 10px 0;
+  padding: 20px 0;
 }
 
 .cutout-ring {
   position: absolute;
-  width: 600px; /* Ring ko bada kiya taaki cards door rahen */
-  height: 600px;
+  width: 500px;
+  height: 500px;
   border: 1px solid rgba(255, 85, 0, 0.2);
   border-radius: 50%;
   z-index: 0;
 }
 
-/* Frame Removed & Optimized Size */
 .cutout-img-box-p2 {
   position: relative;
   z-index: 5;
-  width: 280px; 
-  height: 350px;
-  border-radius: 0 !important;
-  overflow: visible !important;
-  border: none !important;
-  background: transparent !important;
-  box-shadow: none !important;
+  width: 240px; 
+  height: 320px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
 }
 
-/* Floating Service Cards - Moved further away from cutout */
+/* Floating Service Cards - Default (Mobile: Stacked/Grid Style) */
 .service-pop-card {
-  position: absolute;
-  z-index: 10;
   background: rgba(15, 20, 30, 0.95);
   backdrop-filter: blur(14px);
   border: 1px solid rgba(255, 85, 0, 0.4);
@@ -111,13 +106,48 @@ body {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  width: 250px;
+  width: 100%;
+  max-width: 280px;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .service-pop-card:hover {
   border-color: var(--accent-orange);
   box-shadow: 0 0 25px var(--accent-orange-glow);
+}
+
+/* Desktop par Absolute Orbit Layout apply hoga */
+@media (min-width: 1024px) {
+  .cutout-wrapper-p2 {
+    min-height: 380px;
+  }
+  
+  .cutout-ring {
+    width: 600px;
+    height: 600px;
+  }
+
+  .cutout-img-box-p2 {
+    width: 280px;
+    height: 350px;
+    border-radius: 0 !important;
+    overflow: visible !important;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .service-pop-card {
+    position: absolute;
+    z-index: 10;
+    width: 250px;
+  }
+
+  /* Individual absolute positions for desktop */
+  #pop-card-1 { transform: translate(-260px, -80px); }
+  #pop-card-2 { transform: translate(260px, -80px); }
+  #pop-card-3 { transform: translate(-260px, 80px); }
+  #pop-card-4 { transform: translate(260px, 80px); }
 }
 
 /* Page 3: Client Circle Marquee — NEVER PAUSES ON HOVER */

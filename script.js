@@ -17,60 +17,35 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.from('.hero-subtitle', { opacity: 0, y: 20, duration: 0.8, delay: 0.4, ease: 'power3.out' });
     gsap.from('.hero-cta-group', { opacity: 0, y: 20, duration: 0.8, delay: 0.6, ease: 'power3.out' });
 
-    // PAGE 2: Services Cutout POP ANIMATION (Responsive offsets for Mobile vs Desktop)
-    function getServiceOffsets() {
-      const isMobile = window.innerWidth < 768;
-      const offsetX = isMobile ? 92 : 260;
-      const offsetY = isMobile ? 125 : 80;
-
-      return [
-        { el: '#pop-card-1', finalX: -offsetX, finalY: -offsetY }, // Top-Left (Reelmaking)
-        { el: '#pop-card-2', finalX: offsetX, finalY: -offsetY },  // Top-Right (Video Editing)
-        { el: '#pop-card-3', finalX: -offsetX, finalY: offsetY },  // Bottom-Left (Management)
-        { el: '#pop-card-4', finalX: offsetX, finalY: offsetY }   // Bottom-Right (Shooting)
+   // PAGE 2: Services Cutout POP ANIMATION (Only for Desktop Large Screens)
+    if (window.innerWidth >= 1024) {
+      const serviceCards = [
+        { el: '#pop-card-1' }, 
+        { el: '#pop-card-2' },  
+        { el: '#pop-card-3' },  
+        { el: '#pop-card-4' }   
       ];
-    }
 
-    let serviceCards = getServiceOffsets();
-
-    // Set initial position behind cutout
-    function resetCutoutCards() {
       serviceCards.forEach(card => {
-        gsap.set(card.el, { x: 0, y: 0, scale: 0, opacity: 0 });
+        gsap.set(card.el, { scale: 0, opacity: 0 });
+      });
+
+      ScrollTrigger.create({
+        trigger: '#services',
+        start: 'top 75%',
+        onEnter: () => {
+          serviceCards.forEach((card, idx) => {
+            gsap.to(card.el, {
+              scale: 1,
+              opacity: 1,
+              duration: 0.9,
+              delay: idx * 0.12,
+              ease: 'back.out(1.8)'
+            });
+          });
+        }
       });
     }
-
-    resetCutoutCards();
-
-    // Update offsets on window resize
-    window.addEventListener('resize', () => {
-      serviceCards = getServiceOffsets();
-    });
-
-    // Trigger Pop-out animation on Scroll to Page 2
-    ScrollTrigger.create({
-      trigger: '#services',
-      start: 'top 75%',
-      onEnter: () => {
-        serviceCards.forEach((card, idx) => {
-          gsap.to(card.el, {
-            x: card.finalX,
-            y: card.finalY,
-            scale: 1,
-            opacity: 1,
-            duration: 0.85,
-            delay: idx * 0.1,
-            ease: 'back.out(1.7)'
-          });
-        });
-      },
-      onLeaveBack: () => {
-        serviceCards.forEach(card => {
-          gsap.to(card.el, { x: 0, y: 0, scale: 0, opacity: 0, duration: 0.35 });
-        });
-      }
-    });
-
     // Page 4: Growth Metric Cards Reveal
     gsap.utils.toArray('.metric-card').forEach((card, index) => {
       gsap.from(card, {

@@ -234,76 +234,123 @@
     </div>
   </section>
 
-  <!-- PAGE 2: SERVICES SECTION (CENTER CUTOUT + RESPONSIVE POP-OUT ANIMATION) -->
-  <section id="services" class="py-20 sm:py-28 relative bg-slate-950/60 border-t border-slate-800/80 overflow-hidden">
+ <!-- PAGE 2: SERVICES SECTION -->
+  <section id="services" class="py-28 relative bg-slate-950/60 border-t border-slate-800/80">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Header -->
-      <div class="section-header text-center max-w-3xl mx-auto mb-10 sm:mb-14">
-        <h2 class="text-xs font-bold text-[#FF5500] tracking-widest uppercase mb-2 sm:mb-3">Our Core Agency Services</h2>
-        <h2 class="text-2xl sm:text-4xl md:text-5xl font-black tracking-tight text-white">
-         Sky Media <span class="text-[#FF5500]">Services</span> — 5 Years of Experience!
-        </h2>
-        <p class="text-slate-400 text-xs sm:text-sm mt-3 max-w-2xl mx-auto leading-relaxed">
+      <div class="section-header text-center max-w-3xl mx-auto mb-14">
+        <h2 class="text-xs font-bold text-[#FF5500] tracking-widest uppercase mb-3">Our Core Agency Services</h2>
+        <p class="text-3xl sm:text-5xl font-black tracking-tight text-white">
+         Sky Media <span class="text-[#FF5500]"> Services</span>  5 Years of media experience!
+        </p>
+        <p class="text-slate-400 text-sm mt-3 max-w-2xl mx-auto">
           With years of proven success in content creation, freelancing, and building a thriving marketing agency, Sky Media reveals the powerful secrets to dominate creative fields.
         </p>
       </div>
 
-      <!-- Center Cutout & Responsive Pop-out Cards Container -->
-      <div class="cutout-wrapper-p2 relative max-w-4xl mx-auto my-4 sm:my-8">
+      <!-- Center Cutout & Pop-out Cards Container -->
+      <div class="cutout-wrapper-p2 relative max-w-4xl mx-auto my-8 flex flex-col lg:flex-row items-center justify-center gap-6">
         
-        <!-- Background Orbital Ring -->
-        <div class="cutout-ring"></div>
+        <!-- Background Orbital Ring (Desktop Only) -->
+        <div class="cutout-ring hidden lg:block"></div>
+
+        <!-- Left Side Cards for Mobile/Tablet View -->
+        <div class="flex flex-col gap-4 w-full lg:hidden">
+          <div class="service-pop-card mx-auto">
+            <div class="w-10 h-10 rounded-xl bg-[#FF5500]/20 text-[#FF5500] flex items-center justify-center shrink-0">
+              <i data-lucide="clapperboard" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-sm text-white">Social Media Marketing</h3>
+              <p class="text-[11px] text-slate-400">brands and engaging audiences across online platforms.</p>
+            </div>
+          </div>
+
+          <div class="service-pop-card mx-auto">
+            <div class="w-10 h-10 rounded-xl bg-[#FF5500]/20 text-[#FF5500] flex items-center justify-center shrink-0">
+              <i data-lucide="scissors" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm text-white">Web Development</h4>
+              <p class="text-[11px] text-slate-400">Building and maintaining functional websites.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desktop Absolute Card 1 (Top-Left) -->
+        <div id="pop-card-1" class="service-pop-card hidden lg:flex">
+          <div class="w-10 h-10 rounded-xl bg-[#FF5500]/20 text-[#FF5500] flex items-center justify-center shrink-0">
+            <i data-lucide="clapperboard" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-sm text-white">Social Media Marketing</h3>
+            <p class="text-[11px] text-slate-400">brands and engaging audiences across online platforms.</p>
+          </div>
+        </div>
+
+        <!-- Desktop Absolute Card 3 (Bottom-Left) -->
+        <div id="pop-card-3" class="service-pop-card hidden lg:flex">
+          <div class="w-10 h-10 rounded-xl bg-[#FF5500]/20 text-[#FF5500] flex items-center justify-center shrink-0">
+            <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-sm text-white">Video Production</h4>
+            <p class="text-[11px] text-slate-400">Creating and editing visual video content from start to finish</p>
+          </div>
+        </div>
 
         <!-- Center Cutout Portrait -->
-        <div class="cutout-img-box-p2">
+        <div class="cutout-img-box-p2 my-4 lg:my-0">
           <img src="data/cutout.png" alt="Sky Media Creator Cutout" class="w-full h-full object-cover">
-          <div class="absolute bottom-2 left-0 right-0 text-center">
-            <span class="text-[9px] sm:text-[10px] font-black text-[#FF5500] uppercase tracking-widest block">SKY MEDIA DIRECTORS</span>
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+          <div class="absolute bottom-3 left-0 right-0 text-center">
+            <span class="text-[10px] font-black text-[#FF5500] uppercase tracking-widest block">SKY MEDIA DIRECTORS</span>
           </div>
         </div>
 
-        <!-- Pop Card 1: Social Media Marketing (Top-Left) -->
-        <div id="pop-card-1" class="service-pop-card">
-          <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-[#FF5500]/20 text-[#FF5500] flex items-center justify-center shrink-0">
-            <i data-lucide="clapperboard" class="w-4 h-4 sm:w-5 sm:h-5"></i>
+        <!-- Desktop Absolute Card 2 (Top-Right) -->
+        <div id="pop-card-2" class="service-pop-card hidden lg:flex">
+          <div class="w-10 h-10 rounded-xl bg-[#FF5500]/20 text-[#FF5500] flex items-center justify-center shrink-0">
+            <i data-lucide="scissors" class="w-5 h-5"></i>
           </div>
           <div>
-            <h3 class="font-bold text-xs sm:text-sm text-white">Social Media Marketing</h3>
-            <p class="text-[10px] sm:text-[11px] text-slate-400 leading-tight">Brands and engaging audiences across online platforms.</p>
+            <h4 class="font-bold text-sm text-white">Web Development</h4>
+            <p class="text-[11px] text-slate-400">Building and maintaining functional websites.</p>
           </div>
         </div>
 
-        <!-- Pop Card 2: Web Development (Top-Right) -->
-        <div id="pop-card-2" class="service-pop-card">
-          <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-[#FF5500]/20 text-[#FF5500] flex items-center justify-center shrink-0">
-            <i data-lucide="scissors" class="w-4 h-4 sm:w-5 sm:h-5"></i>
+        <!-- Desktop Absolute Card 4 (Bottom-Right) -->
+        <div id="pop-card-4" class="service-pop-card hidden lg:flex">
+          <div class="w-10 h-10 rounded-xl bg-[#FF5500]/20 text-[#FF5500] flex items-center justify-center shrink-0">
+            <i data-lucide="video" class="w-5 h-5"></i>
           </div>
           <div>
-            <h4 class="font-bold text-xs sm:text-sm text-white">Web Development</h4>
-            <p class="text-[10px] sm:text-[11px] text-slate-400 leading-tight">Building and maintaining functional websites.</p>
+            <h4 class="font-bold text-sm text-white">Meta Ads Manager</h4>
+            <p class="text-[11px] text-slate-400">Running paid ad campaigns on Facebook and Instagram.</p>
           </div>
         </div>
 
-        <!-- Pop Card 3: Video Production (Bottom-Left) -->
-        <div id="pop-card-3" class="service-pop-card">
-          <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-[#FF5500]/20 text-[#FF5500] flex items-center justify-center shrink-0">
-            <i data-lucide="bar-chart-3" class="w-4 h-4 sm:w-5 sm:h-5"></i>
+        <!-- Right Side Cards for Mobile/Tablet View -->
+        <div class="flex flex-col gap-4 w-full lg:hidden">
+          <div class="service-pop-card mx-auto">
+            <div class="w-10 h-10 rounded-xl bg-[#FF5500]/20 text-[#FF5500] flex items-center justify-center shrink-0">
+              <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm text-white">Video Production</h4>
+              <p class="text-[11px] text-slate-400">Creating and editing visual video content from start to finish</p>
+            </div>
           </div>
-          <div>
-            <h4 class="font-bold text-xs sm:text-sm text-white">Video Production</h4>
-            <p class="text-[10px] sm:text-[11px] text-slate-400 leading-tight">Creating and editing visual video content from start to finish.</p>
-          </div>
-        </div>
 
-        <!-- Pop Card 4: Meta Ads Manager (Bottom-Right) -->
-        <div id="pop-card-4" class="service-pop-card">
-          <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-[#FF5500]/20 text-[#FF5500] flex items-center justify-center shrink-0">
-            <i data-lucide="video" class="w-4 h-4 sm:w-5 sm:h-5"></i>
-          </div>
-          <div>
-            <h4 class="font-bold text-xs sm:text-sm text-white">Meta Ads Manager</h4>
-            <p class="text-[10px] sm:text-[11px] text-slate-400 leading-tight">Running paid ad campaigns on Facebook and Instagram.</p>
+          <div class="service-pop-card mx-auto">
+            <div class="w-10 h-10 rounded-xl bg-[#FF5500]/20 text-[#FF5500] flex items-center justify-center shrink-0">
+              <i data-lucide="video" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm text-white">Meta Ads Manager</h4>
+              <p class="text-[11px] text-slate-400">Running paid ad campaigns on Facebook and Instagram.</p>
+            </div>
           </div>
         </div>
 
@@ -311,7 +358,6 @@
 
     </div>
   </section>
-
   <!-- PAGE 3: CLIENTS WE HAVE WORKED WITH & REVIEWS (DARK BG WITH ORANGE TEXT & NEVER-PAUSING MARQUEE) -->
   <section id="clients" class="py-20 sm:py-24 bg-slate-950/70 border-t border-slate-800 relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
