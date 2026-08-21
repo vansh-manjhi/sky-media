@@ -1,4 +1,4 @@
-/* Script for Sky Media - Black, White & Orange Theme & Animations */
+/* Script for Sky Media - Black, White & Orange Theme & Animations (Fully Responsive) */
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -7,74 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
   }
 
-  // 2. Page 1 Background Animation Canvas (Interactive Floating Particles & Mesh)
-  const canvas = document.getElementById('hero-canvas');
-  if (canvas) {
-    const ctx = canvas.getContext('2d');
-    let width = canvas.width = window.innerWidth;
-    let height = canvas.height = window.innerHeight;
-
-    window.addEventListener('resize', () => {
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
-    });
-
-    const particles = [];
-    const particleCount = 45;
-
-    for (let i = 0; i < particleCount; i++) {
-      particles.push({
-        x: Math.random() * width,
-        y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.6,
-        vy: (Math.random() - 0.5) * 0.6,
-        radius: Math.random() * 2 + 1,
-        color: Math.random() > 0.4 ? 'rgba(255, 85, 0, 0.4)' : 'rgba(255, 255, 255, 0.25)'
-      });
-    }
-
-    function animateCanvas() {
-      ctx.clearRect(0, 0, width, height);
-
-      // Draw connecting lines
-      for (let i = 0; i < particleCount; i++) {
-        for (let j = i + 1; j < particleCount; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-
-          if (dist < 130) {
-            ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(255, 85, 0, ${0.15 * (1 - dist / 130)})`;
-            ctx.lineWidth = 0.8;
-            ctx.stroke();
-          }
-        }
-      }
-
-      // Draw & update particles
-      particles.forEach(p => {
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = p.color;
-        ctx.fill();
-
-        p.x += p.vx;
-        p.y += p.vy;
-
-        if (p.x < 0 || p.x > width) p.vx *= -1;
-        if (p.y < 0 || p.y > height) p.vy *= -1;
-      });
-
-      requestAnimationFrame(animateCanvas);
-    }
-
-    animateCanvas();
-  }
-
-  // 3. GSAP Scroll Animations
+  // 2. GSAP Scroll Animations
   if (window.gsap && window.ScrollTrigger) {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -84,22 +17,39 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.from('.hero-subtitle', { opacity: 0, y: 20, duration: 0.8, delay: 0.4, ease: 'power3.out' });
     gsap.from('.hero-cta-group', { opacity: 0, y: 20, duration: 0.8, delay: 0.6, ease: 'power3.out' });
 
-    // PAGE 2: Services Cutout POP ANIMATION
-    const serviceCards = [
-      { el: '#pop-card-1', finalX: -260, finalY: -80 }, // Top-Left (Reelmaking)
-      { el: '#pop-card-2', finalX: 260, finalY: -80 },  // Top-Right (Video Editing)
-      { el: '#pop-card-3', finalX: -260, finalY: 80 },  // Bottom-Left (Management)
-      { el: '#pop-card-4', finalX: 260, finalY: 80 }   // Bottom-Right (Shooting)
-    ];
+    // PAGE 2: Services Cutout POP ANIMATION (Responsive offsets for Mobile vs Desktop)
+    function getServiceOffsets() {
+      const isMobile = window.innerWidth < 768;
+      const offsetX = isMobile ? 92 : 260;
+      const offsetY = isMobile ? 125 : 80;
+
+      return [
+        { el: '#pop-card-1', finalX: -offsetX, finalY: -offsetY }, // Top-Left (Reelmaking)
+        { el: '#pop-card-2', finalX: offsetX, finalY: -offsetY },  // Top-Right (Video Editing)
+        { el: '#pop-card-3', finalX: -offsetX, finalY: offsetY },  // Bottom-Left (Management)
+        { el: '#pop-card-4', finalX: offsetX, finalY: offsetY }   // Bottom-Right (Shooting)
+      ];
+    }
+
+    let serviceCards = getServiceOffsets();
 
     // Set initial position behind cutout
-    serviceCards.forEach(card => {
-      gsap.set(card.el, { x: 0, y: 0, scale: 0, opacity: 0 });
+    function resetCutoutCards() {
+      serviceCards.forEach(card => {
+        gsap.set(card.el, { x: 0, y: 0, scale: 0, opacity: 0 });
+      });
+    }
+
+    resetCutoutCards();
+
+    // Update offsets on window resize
+    window.addEventListener('resize', () => {
+      serviceCards = getServiceOffsets();
     });
 
     // Trigger Pop-out animation on Scroll to Page 2
     ScrollTrigger.create({
-      trigger: '#services-cutout-section',
+      trigger: '#services',
       start: 'top 75%',
       onEnter: () => {
         serviceCards.forEach((card, idx) => {
@@ -108,15 +58,15 @@ document.addEventListener('DOMContentLoaded', () => {
             y: card.finalY,
             scale: 1,
             opacity: 1,
-            duration: 0.9,
-            delay: idx * 0.12,
-            ease: 'back.out(1.8)'
+            duration: 0.85,
+            delay: idx * 0.1,
+            ease: 'back.out(1.7)'
           });
         });
       },
       onLeaveBack: () => {
         serviceCards.forEach(card => {
-          gsap.to(card.el, { x: 0, y: 0, scale: 0, opacity: 0, duration: 0.4 });
+          gsap.to(card.el, { x: 0, y: 0, scale: 0, opacity: 0, duration: 0.35 });
         });
       }
     });
@@ -158,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 4. Video Lightbox Modal Player
+  // 3. Video Lightbox Modal Player
   const modal = document.getElementById('video-modal');
   const iframe = document.getElementById('modal-iframe');
   const closeBtn = document.getElementById('close-modal');
@@ -196,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
     modal.classList.remove('flex');
   }
 
-  // 5. Contact Form Handler
+  // 4. Contact Form Handler
   const contactForm = document.getElementById('skymedia-contact-form');
   const formSuccess = document.getElementById('form-success-msg');
 
@@ -212,13 +162,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 6. Mobile Menu Toggle
+  // 5. Mobile Menu Toggle & Auto-Close on Link Click
   const menuToggle = document.getElementById('mobile-menu-toggle');
   const mobileDrawer = document.getElementById('mobile-drawer');
 
   if (menuToggle && mobileDrawer) {
     menuToggle.addEventListener('click', () => {
       mobileDrawer.classList.toggle('hidden');
+    });
+
+    const drawerLinks = mobileDrawer.querySelectorAll('a');
+    drawerLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileDrawer.classList.add('hidden');
+      });
     });
   }
 });
