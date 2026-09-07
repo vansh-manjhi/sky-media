@@ -91,51 +91,50 @@
   </header>
 
   <!-- PAGE 1: HOMEPAGE (HERO + BACKGROUND VIDEO + INFINITE UNPAUSING VIDEO MARQUEE) -->
-  <section id="home" class="relative pt-32 pb-16 sm:pt-40 sm:pb-20 md:pt-44 md:pb-24 overflow-hidden">
+  <section id="home" class="relative pt-28 pb-12 sm:pt-36 sm:pb-16 overflow-hidden min-h-[85vh] sm:min-h-[90vh] flex flex-col justify-center">
     
-    <!-- Background Video -->
-    <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover pointer-events-none z-0 opacity-40">
+    <!-- Background Video with Mobile Autoplay Support -->
+    <video autoplay loop muted playsinline webkit-playsinline class="absolute inset-0 w-full h-full object-cover pointer-events-none z-0 opacity-40">
       <source src="data/dark 01.mp4" type="video/mp4">
     </video>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
       
       <!-- Status Badge -->
-      <div class="hero-badge inline-flex items-center gap-2 sm:gap-3 px-3.5 py-1.5 rounded-full bg-[#FF5500]/10 border border-[#FF5500]/30 backdrop-blur-md text-[11px] sm:text-xs md:text-sm text-[#FF5500] font-bold mb-6 sm:mb-8 max-w-full">
+      <div class="hero-badge inline-flex items-center gap-2 sm:gap-3 px-3.5 py-1.5 rounded-full bg-[#FF5500]/10 border border-[#FF5500]/30 backdrop-blur-md text-[11px] sm:text-xs md:text-sm text-[#FF5500] font-bold mb-5 sm:mb-6 max-w-full">
         <span class="pulse-dot-orange shrink-0"></span>
         <span class="truncate">SKY MEDIA AGENCY · NOW ACCEPTING CLIENTS</span>
         <i data-lucide="sparkles" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#FF5500] shrink-0"></i>
       </div>
 
       <!-- Hero Main Title -->
-      <h1 class="hero-title text-3xl sm:text-5xl md:text-7xl font-black tracking-tight max-w-5xl mx-auto leading-tight sm:leading-[1.1] mb-4 sm:mb-6 text-white">
+      <h1 class="hero-title text-3xl sm:text-5xl md:text-6xl font-black tracking-tight max-w-5xl mx-auto leading-tight sm:leading-[1.1] mb-4 sm:mb-6 text-white">
         We Don't Just Edit Videos,<br>
         <span class="text-[#FF5500]">We Build Digital Empires.</span>
       </h1>
 
       <!-- Hero CTA Button -->
-      <div class="hero-cta-group flex justify-center mb-10 sm:mb-14">
+      <div class="hero-cta-group flex justify-center mb-8 sm:mb-12">
         <a href="#contact" class="px-7 sm:px-9 py-3.5 sm:py-4 rounded-full bg-[#FF5500] hover:bg-[#ff6611] text-slate-950 font-black text-sm sm:text-base hover:shadow-xl hover:shadow-[#FF5500]/30 hover:scale-105 transition-all flex items-center gap-2">
           <span>Get In Touch</span>
           <i data-lucide="arrow-right" class="w-4 h-4 sm:w-5 sm:h-5 text-slate-950"></i>
         </a>
       </div>
 
-      <!-- Infinite Auto-Running Video Marquee (NEVER PAUSES ON HOVER) -->
+      <!-- Infinite Auto-Running Video Marquee (100% UNIFORM SPACING BETWEEN ALL CARDS) -->
       <div class="video-marquee-container">
         
         <!-- Outer Wrapper -->
         <div class="overflow-hidden w-full flex">
           
           <!-- Video Set 1 (Original) -->
-          <div class="video-marquee-content flex gap-4 sm:gap-6 shrink-0">
+          <div class="video-marquee-content flex gap-6 pr-6 shrink-0">
             
             <!-- Video Card 1 -->
             <div class="video-card glass-panel rounded-2xl sm:rounded-3xl overflow-hidden group">
               <div class="relative aspect-video bg-slate-900 overflow-hidden">
-                <video autoplay loop muted playsinline class="video-player">
+                <video autoplay loop muted playsinline webkit-playsinline class="video-player">
                   <source src="data/creation1.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
                 </video>
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
                 <span class="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 px-2.5 py-0.5 sm:py-1 rounded-full bg-black/70 text-[10px] sm:text-xs font-bold text-[#FF5500] border border-[#FF5500]/30">Viral Edit</span>
@@ -149,9 +148,8 @@
             <!-- Video Card 2 -->
             <div class="video-card glass-panel rounded-2xl sm:rounded-3xl overflow-hidden group">
               <div class="relative aspect-video bg-slate-900 overflow-hidden">
-                <video autoplay loop muted playsinline class="video-player">
+                <video autoplay loop muted playsinline webkit-playsinline class="video-player">
                   <source src="data/creation2.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
                 </video>
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
                 <span class="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 px-2.5 py-0.5 sm:py-1 rounded-full bg-black/70 text-[10px] sm:text-xs font-bold text-[#FF5500] border border-[#FF5500]/30">Commercial</span>
@@ -165,9 +163,8 @@
             <!-- Video Card 3 -->
             <div class="video-card glass-panel rounded-2xl sm:rounded-3xl overflow-hidden group">
               <div class="relative aspect-video bg-slate-900 overflow-hidden">
-                <video autoplay loop muted playsinline class="video-player">
+                <video autoplay loop muted playsinline webkit-playsinline class="video-player">
                   <source src="data/creation3.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
                 </video>
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
                 <span class="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 px-2.5 py-0.5 sm:py-1 rounded-full bg-black/70 text-[10px] sm:text-xs font-bold text-[#FF5500] border border-[#FF5500]/30">Docu-Series</span>
@@ -181,11 +178,11 @@
           </div>
 
           <!-- Duplicated Video Set for Seamless Loop -->
-          <div class="video-marquee-content flex gap-4 sm:gap-6 shrink-0" aria-hidden="true">
+          <div class="video-marquee-content flex gap-6 pr-6 shrink-0" aria-hidden="true">
             
             <div class="video-card glass-panel rounded-2xl sm:rounded-3xl overflow-hidden group">
               <div class="relative aspect-video bg-slate-900 overflow-hidden">
-                <video autoplay loop muted playsinline class="video-player">
+                <video autoplay loop muted playsinline webkit-playsinline class="video-player">
                   <source src="data/creation1.mp4" type="video/mp4">
                 </video>
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
@@ -199,7 +196,7 @@
 
             <div class="video-card glass-panel rounded-2xl sm:rounded-3xl overflow-hidden group">
               <div class="relative aspect-video bg-slate-900 overflow-hidden">
-                <video autoplay loop muted playsinline class="video-player">
+                <video autoplay loop muted playsinline webkit-playsinline class="video-player">
                   <source src="data/creation2.mp4" type="video/mp4">
                 </video>
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
@@ -213,7 +210,7 @@
 
             <div class="video-card glass-panel rounded-2xl sm:rounded-3xl overflow-hidden group">
               <div class="relative aspect-video bg-slate-900 overflow-hidden">
-                <video autoplay loop muted playsinline class="video-player">
+                <video autoplay loop muted playsinline webkit-playsinline class="video-player">
                   <source src="data/creation3.mp4" type="video/mp4">
                 </video>
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
@@ -234,143 +231,118 @@
     </div>
   </section>
 
- <!-- PAGE 2: SERVICES SECTION -->
-  <section id="services" class="py-28 relative bg-slate-950/60 border-t border-slate-800/80">
+  <!-- PAGE 2: SERVICES SECTION (PERFECTLY ALIGNED LEFT 2 / RIGHT 2 CARDS + CLICKABLE LINKS) -->
+  <section id="services" class="py-12 sm:py-16 relative bg-slate-950/60 border-t border-slate-800/80 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Header -->
-      <div class="section-header text-center max-w-3xl mx-auto mb-14">
-        <h2 class="text-xs font-bold text-[#FF5500] tracking-widest uppercase mb-3">Our Core Agency Services</h2>
-        <p class="text-3xl sm:text-5xl font-black tracking-tight text-white">
-         Sky Media <span class="text-[#FF5500]"> Services</span>  5 Years of media experience!
-        </p>
-        <p class="text-slate-400 text-sm mt-3 max-w-2xl mx-auto">
-          With years of proven success in content creation, freelancing, and building a thriving marketing agency, Sky Media reveals the powerful secrets to dominate creative fields.
+      <div class="section-header text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+        <h2 class="text-xs font-bold text-[#FF5500] tracking-widest uppercase mb-2 sm:mb-3">Our Core Agency Services</h2>
+        <h2 class="text-2xl sm:text-4xl md:text-5xl font-black tracking-tight text-white">
+         Sky Media <span class="text-[#FF5500]">Services</span> — 5 Years of Experience!
+        </h2>
+        <p class="text-slate-400 text-xs sm:text-sm mt-2 sm:mt-3 max-w-2xl mx-auto leading-relaxed">
+          Click or tap any service container below to explore portfolio videos, project samples, and strategy breakdown!
         </p>
       </div>
 
-      <!-- Center Cutout & Pop-out Cards Container -->
-      <div class="cutout-wrapper-p2 relative max-w-4xl mx-auto my-8 flex flex-col lg:flex-row items-center justify-center gap-6">
+      <!-- Cutout & Interactive Services Container -->
+      <div class="cutout-wrapper-p2 relative max-w-6xl mx-auto my-2 sm:my-4 flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-0">
         
         <!-- Background Orbital Ring (Desktop Only) -->
         <div class="cutout-ring hidden lg:block"></div>
 
-        <!-- Left Side Cards for Mobile/Tablet View -->
-        <div class="flex flex-col gap-4 w-full lg:hidden">
-          <div class="service-pop-card mx-auto">
-            <div class="w-10 h-10 rounded-xl bg-[#FF5500]/20 text-[#FF5500] flex items-center justify-center shrink-0">
+        <!-- 1. Social Media Marketing (Top-Left) -->
+        <a href="social-media.html" id="pop-card-1" class="service-pop-card group relative block">
+          <span class="absolute -top-3 right-3 px-2.5 py-0.5 rounded-full bg-[#FF5500] text-[9px] font-black text-slate-950 shadow-md group-hover:scale-110 transition-transform flex items-center gap-1">
+            ✨ Tap to Explore ↗
+          </span>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-[#FF5500]/20 text-[#FF5500] flex items-center justify-center shrink-0 group-hover:bg-[#FF5500] group-hover:text-slate-950 transition-colors">
               <i data-lucide="clapperboard" class="w-5 h-5"></i>
             </div>
             <div>
-              <h3 class="font-bold text-sm text-white">Social Media Marketing</h3>
-              <p class="text-[11px] text-slate-400">brands and engaging audiences across online platforms.</p>
+              <h3 class="font-bold text-sm text-white group-hover:text-[#FF5500] transition-colors">Social Media Marketing</h3>
+              <p class="text-[11px] text-slate-400 leading-snug">Brands and engaging audiences across online platforms.</p>
             </div>
           </div>
+        </a>
 
-          <div class="service-pop-card mx-auto">
-            <div class="w-10 h-10 rounded-xl bg-[#FF5500]/20 text-[#FF5500] flex items-center justify-center shrink-0">
-              <i data-lucide="scissors" class="w-5 h-5"></i>
-            </div>
-            <div>
-              <h4 class="font-bold text-sm text-white">Web Development</h4>
-              <p class="text-[11px] text-slate-400">Building and maintaining functional websites.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Desktop Absolute Card 1 (Top-Left) -->
-        <div id="pop-card-1" class="service-pop-card hidden lg:flex">
-          <div class="w-10 h-10 rounded-xl bg-[#FF5500]/20 text-[#FF5500] flex items-center justify-center shrink-0">
-            <i data-lucide="clapperboard" class="w-5 h-5"></i>
-          </div>
-          <div>
-            <h3 class="font-bold text-sm text-white">Social Media Marketing</h3>
-            <p class="text-[11px] text-slate-400">brands and engaging audiences across online platforms.</p>
-          </div>
-        </div>
-
-        <!-- Desktop Absolute Card 3 (Bottom-Left) -->
-        <div id="pop-card-3" class="service-pop-card hidden lg:flex">
-          <div class="w-10 h-10 rounded-xl bg-[#FF5500]/20 text-[#FF5500] flex items-center justify-center shrink-0">
-            <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
-          </div>
-          <div>
-            <h4 class="font-bold text-sm text-white">Video Production</h4>
-            <p class="text-[11px] text-slate-400">Creating and editing visual video content from start to finish</p>
-          </div>
-        </div>
-
-        <!-- Center Cutout Portrait -->
-        <div class="cutout-img-box-p2 my-4 lg:my-0">
-          <img src="data/cutout.png" alt="Sky Media Creator Cutout" class="w-full h-full object-cover">
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
-          <div class="absolute bottom-3 left-0 right-0 text-center">
-            <span class="text-[10px] font-black text-[#FF5500] uppercase tracking-widest block">SKY MEDIA DIRECTORS</span>
-          </div>
-        </div>
-
-        <!-- Desktop Absolute Card 2 (Top-Right) -->
-        <div id="pop-card-2" class="service-pop-card hidden lg:flex">
-          <div class="w-10 h-10 rounded-xl bg-[#FF5500]/20 text-[#FF5500] flex items-center justify-center shrink-0">
-            <i data-lucide="scissors" class="w-5 h-5"></i>
-          </div>
-          <div>
-            <h4 class="font-bold text-sm text-white">Web Development</h4>
-            <p class="text-[11px] text-slate-400">Building and maintaining functional websites.</p>
-          </div>
-        </div>
-
-        <!-- Desktop Absolute Card 4 (Bottom-Right) -->
-        <div id="pop-card-4" class="service-pop-card hidden lg:flex">
-          <div class="w-10 h-10 rounded-xl bg-[#FF5500]/20 text-[#FF5500] flex items-center justify-center shrink-0">
-            <i data-lucide="video" class="w-5 h-5"></i>
-          </div>
-          <div>
-            <h4 class="font-bold text-sm text-white">Meta Ads Manager</h4>
-            <p class="text-[11px] text-slate-400">Running paid ad campaigns on Facebook and Instagram.</p>
-          </div>
-        </div>
-
-        <!-- Right Side Cards for Mobile/Tablet View -->
-        <div class="flex flex-col gap-4 w-full lg:hidden">
-          <div class="service-pop-card mx-auto">
-            <div class="w-10 h-10 rounded-xl bg-[#FF5500]/20 text-[#FF5500] flex items-center justify-center shrink-0">
+        <!-- 3. Video Production (Bottom-Left: Aligned directly under Card 1) -->
+        <a href="video-production.html" id="pop-card-3" class="service-pop-card group relative block">
+          <span class="absolute -top-3 right-3 px-2.5 py-0.5 rounded-full bg-[#FF5500] text-[9px] font-black text-slate-950 shadow-md group-hover:scale-110 transition-transform flex items-center gap-1">
+            ✨ Tap to Explore ↗
+          </span>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-[#FF5500]/20 text-[#FF5500] flex items-center justify-center shrink-0 group-hover:bg-[#FF5500] group-hover:text-slate-950 transition-colors">
               <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
             </div>
             <div>
-              <h4 class="font-bold text-sm text-white">Video Production</h4>
-              <p class="text-[11px] text-slate-400">Creating and editing visual video content from start to finish</p>
+              <h3 class="font-bold text-sm text-white group-hover:text-[#FF5500] transition-colors">Video Production</h3>
+              <p class="text-[11px] text-slate-400 leading-snug">Creating and editing visual video content from start to finish.</p>
             </div>
           </div>
+        </a>
 
-          <div class="service-pop-card mx-auto">
-            <div class="w-10 h-10 rounded-xl bg-[#FF5500]/20 text-[#FF5500] flex items-center justify-center shrink-0">
+        <!-- Center Cutout Portrait -->
+        <div class="cutout-img-box-p2 my-2 lg:my-0 shrink-0">
+          <img src="data/admin-cutout.png" alt="Sky Media Creator Cutout" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent pointer-events-none"></div>
+          <div class="absolute bottom-3 left-0 right-0 text-center">
+            <span class="text-[16px] sm:text-[18px] font-black text-[#FF5500] uppercase tracking-widest block">SKY MEDIA DIRECTOR</span>
+          </div>
+        </div>
+
+        <!-- 2. Web Development (Top-Right) -->
+        <a href="web-development.html" id="pop-card-2" class="service-pop-card group relative block">
+          <span class="absolute -top-3 right-3 px-2.5 py-0.5 rounded-full bg-[#FF5500] text-[9px] font-black text-slate-950 shadow-md group-hover:scale-110 transition-transform flex items-center gap-1">
+            ✨ Tap to Explore ↗
+          </span>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-[#FF5500]/20 text-[#FF5500] flex items-center justify-center shrink-0 group-hover:bg-[#FF5500] group-hover:text-slate-950 transition-colors">
+              <i data-lucide="scissors" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-sm text-white group-hover:text-[#FF5500] transition-colors">Web Development</h3>
+              <p class="text-[11px] text-slate-400 leading-snug">Building and maintaining functional websites.</p>
+            </div>
+          </div>
+        </a>
+
+        <!-- 4. Meta Ads Manager (Bottom-Right: Aligned directly under Card 2) -->
+        <a href="meta-ads.html" id="pop-card-4" class="service-pop-card group relative block">
+          <span class="absolute -top-3 right-3 px-2.5 py-0.5 rounded-full bg-[#FF5500] text-[9px] font-black text-slate-950 shadow-md group-hover:scale-110 transition-transform flex items-center gap-1">
+            ✨ Tap to Explore ↗
+          </span>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-[#FF5500]/20 text-[#FF5500] flex items-center justify-center shrink-0 group-hover:bg-[#FF5500] group-hover:text-slate-950 transition-colors">
               <i data-lucide="video" class="w-5 h-5"></i>
             </div>
             <div>
-              <h4 class="font-bold text-sm text-white">Meta Ads Manager</h4>
-              <p class="text-[11px] text-slate-400">Running paid ad campaigns on Facebook and Instagram.</p>
+              <h3 class="font-bold text-sm text-white group-hover:text-[#FF5500] transition-colors">Meta Ads Manager</h3>
+              <p class="text-[11px] text-slate-400 leading-snug">Running paid ad campaigns on Facebook and Instagram.</p>
             </div>
           </div>
-        </div>
+        </a>
 
       </div>
 
     </div>
   </section>
-  <!-- PAGE 3: CLIENTS WE HAVE WORKED WITH & REVIEWS (DARK BG WITH ORANGE TEXT & NEVER-PAUSING MARQUEE) -->
-  <section id="clients" class="py-20 sm:py-24 bg-slate-950/70 border-t border-slate-800 relative overflow-hidden">
+
+  <!-- PAGE 3: CLIENTS WE HAVE WORKED WITH & REVIEWS -->
+  <section id="clients" class="py-12 sm:py-16 bg-slate-950/70 border-t border-slate-800 relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Title -->
-      <div class="text-center mb-10 sm:mb-14">
+      <div class="text-center mb-8 sm:mb-12">
         <h2 class="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight">
           Clients we have <span class="text-[#FF5500]">worked with</span>
         </h2>
       </div>
 
       <!-- Infinite Auto-Scrolling Client Circles -->
-      <div class="client-marquee-container mb-16 sm:mb-20">
+      <div class="client-marquee-container mb-12 sm:mb-16">
         
         <!-- Original Set: 10 Clients -->
         <div class="client-marquee-content">
@@ -393,7 +365,7 @@
 
           <div class="flex flex-col items-center gap-2 text-center text-white">
             <div class="client-circle overflow-hidden bg-white border border-slate-800 shrink-0">
-              <img src="data/ AGENCY.jpg" alt="ADVER AIM" class="w-full h-full object-contain rounded-full">
+              <img src="data/MARKET AGENCY.jpg" alt="ADVER AIM" class="w-full h-full object-contain rounded-full">
             </div>
             <div class="font-bold text-[11px] sm:text-xs">ADVER AIM</div>
             <div class="text-[9px] sm:text-[10px] text-[#FF5500] font-semibold">50+ ADDS DELIVERED</div>
@@ -545,80 +517,136 @@
       </div>
 
       <!-- Sub-section: Reviews Header -->
-      <div class="text-center mb-8 sm:mb-12">
+      <div class="text-center mb-6 sm:mb-10">
         <h3 class="text-xl sm:text-2xl font-black text-white uppercase tracking-wider">Client Reviews</h3>
       </div>
 
-      <!-- 2-Lane Infinite Marquee Container -->
-      <div class="flex flex-col gap-5 sm:gap-6 overflow-hidden w-full relative">
+      <!-- 2-Lane Infinite Marquee Container (100% Seamless 1-to-1 Duplication) -->
+      <div class="flex flex-col gap-4 sm:gap-6 overflow-hidden w-full relative">
         
         <!-- LANE 1: Left Continuous Marquee -->
         <div class="flex overflow-hidden w-full relative">
           <div class="flex gap-4 sm:gap-6 animate-marquee shrink-0">
             
-            <!-- Review 1 -->
+<!-- <!-- Review 1 (Rating: 4.8) -->
             <div class="w-[280px] sm:w-[340px] glass-panel text-white p-5 sm:p-6 rounded-2xl shadow-xl flex-shrink-0 border border-slate-700/60 bg-[#12141c]/90 flex flex-col justify-between">
-              <p class="text-xs text-slate-300 leading-relaxed mb-4 sm:mb-6">"When I joined this cohort, I just wanted to learn editing as a hobby. I knew nothing about editing before. It just found it cool, so I joined, and then I took part in the 21-day challenge. It changed everything for me. I gained 20k followers from that challenge in just 21 days, built a personal brand, and started getting brand deals and earning money from video editing. Tharun Speaks is literally insane!"</p>
-              <div class="flex items-center gap-3">
-                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden bg-slate-800 border border-slate-700 flex-shrink-0 flex items-center justify-center">
-                  <img src="dhruvil.jpg" alt="Dhruvil Patel" class="w-full h-full object-cover aspect-square">
+              <div>
+                <div class="flex gap-1 mb-3 text-amber-400">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current opacity-80" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                 </div>
-                <div class="font-bold text-xs text-white">Dhruvil Patel</div>
+                <p class="text-xs text-slate-300 leading-relaxed mb-4 sm:mb-6">"Sky Media completely transformed our brand's video content and social media presence. Their editing style, fast pacing, and creative storytelling doubled our Instagram engagement within just a month. Working with them was an absolute game-changer!"</p>
               </div>
+              <div class="font-bold text-xs text-white">Dhruvil Patel</div>
             </div>
 
-            <!-- Review 2 -->
+            <!-- Review 2 (Rating: 4.2) -->
             <div class="w-[280px] sm:w-[340px] glass-panel text-white p-5 sm:p-6 rounded-2xl shadow-xl flex-shrink-0 border border-slate-700/60 bg-[#12141c]/90 flex flex-col justify-between">
-              <p class="text-xs text-slate-300 leading-relaxed mb-4 sm:mb-6">"Enrolling in Tharun Speaks Video Editing Cohort was one of my best decisions. Within a month, I got an internship at The Boring Edit, later joined Unacademy, and now I'm working at an AI startup. This cohort teaches way beyond editing; they teach storytelling, freelancing, content creation, and everything you actually need to grow. The best you can choose."</p>
-              <div class="flex items-center gap-3">
-                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden bg-slate-800 border border-slate-700 flex-shrink-0 flex items-center justify-center">
-                  <img src="deepak.jpg" alt="Deepak Divakar" class="w-full h-full object-cover aspect-square">
+              <div>
+                <div class="flex gap-1 mb-3 text-amber-400">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 text-slate-600 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                 </div>
-                <div class="font-bold text-xs text-white">Deepak Divakar</div>
+                <p class="text-xs text-slate-300 leading-relaxed mb-4 sm:mb-6">"We hired Sky Media for our web development and branding needs. Within weeks, they delivered a lightning-fast, high-performance website with stunning custom animations. Their attention to detail and modern UI design is top-notch."</p>
               </div>
+              <div class="font-bold text-xs text-white">Deepak Divakar</div>
             </div>
 
-            <!-- Review 3 -->
+            <!-- Review 3 (Rating: 5.0) -->
             <div class="w-[280px] sm:w-[340px] glass-panel text-white p-5 sm:p-6 rounded-2xl shadow-xl flex-shrink-0 border border-slate-700/60 bg-[#12141c]/90 flex flex-col justify-between">
-              <p class="text-xs text-slate-300 leading-relaxed mb-4 sm:mb-6">"Hey guys, I am Akash, and I was in my 3rd year of college when I joined Not Just A Video Editing Cohort 2, and honestly, it changed everything for me. Within a few months, I started earning ₹50–60K a month from editing, which was unreal for me, being a student. What I love the most is that it's not just about editing but also how to write killer scripts, master storytelling, and build an agency."</p>
-              <div class="flex items-center gap-3">
-                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden bg-slate-800 border border-slate-700 flex-shrink-0 flex items-center justify-center">
-                  <img src="akash.jpg" alt="Akash" class="w-full h-full object-cover aspect-square">
+              <div>
+                <div class="flex gap-1 mb-3 text-amber-400">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                 </div>
-                <div class="font-bold text-xs text-white">Akash</div>
+                <p class="text-xs text-slate-300 leading-relaxed mb-4 sm:mb-6">"As a startup, scaling our customer acquisition was tough until we partnered with Sky Media. Their Meta Ads campaigns generated a 4.5x ROAS for our store. They know exactly how to target the right audience and optimize budgets profitably."</p>
               </div>
+              <div class="font-bold text-xs text-white">Akash</div>
             </div>
 
-            <!-- Review 4 -->
+            <!-- Review 4 (Rating: 3.5) -->
             <div class="w-[280px] sm:w-[340px] glass-panel text-white p-5 sm:p-6 rounded-2xl shadow-xl flex-shrink-0 border border-slate-700/60 bg-[#12141c]/90 flex flex-col justify-between">
-              <p class="text-xs text-slate-300 leading-relaxed mb-4 sm:mb-6">"Hey everyone, I am Satwik. Before joining Cohort 3, I was just an average 2nd-year B.Tech student with no idea how to start freelancing. Now I earn ₹40K a month doing video editing. And not just editing, this cohort taught me how to talk to clients, negotiate, and close deals. The mentors and community genuinely help you grow. If you're serious about building your career, this course is worth every bit."</p>
-              <div class="flex items-center gap-3">
-                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden bg-slate-800 border border-slate-700 flex-shrink-0 flex items-center justify-center">
-                  <img src="satwik.jpg" alt="Satwik" class="w-full h-full object-cover aspect-square">
+              <div>
+                <div class="flex gap-1 mb-3 text-amber-400">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 text-slate-600 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 text-slate-600 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                 </div>
-                <div class="font-bold text-xs text-white">Satwik</div>
+                <p class="text-xs text-slate-300 leading-relaxed mb-4 sm:mb-6">"Sky Media handles our complete video production and social media marketing. Their team is extremely professional, creative, and always delivers projects on time. If you are serious about scaling online, this is the team."</p>
               </div>
+              <div class="font-bold text-xs text-white">Satwik</div>
             </div>
 
-            <!-- Duplicate Set for Seamless Loop -->
+            <!-- Exact Duplicate Set for Lane 1 Seamless Loop -->
+            <!-- Duplicate Review 1 (Rating: 4.8) -->
             <div class="w-[280px] sm:w-[340px] glass-panel text-white p-5 sm:p-6 rounded-2xl shadow-xl flex-shrink-0 border border-slate-700/60 bg-[#12141c]/90 flex flex-col justify-between">
-              <p class="text-xs text-slate-300 leading-relaxed mb-4 sm:mb-6">"When I joined this cohort, I just wanted to learn editing as a hobby. I knew nothing about editing before. It just found it cool, so I joined, and then I took part in the 21-day challenge. It changed everything for me. I gained 20k followers from that challenge in just 21 days, built a personal brand, and started getting brand deals and earning money from video editing. Tharun Speaks is literally insane!"</p>
-              <div class="flex items-center gap-3">
-                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden bg-slate-800 border border-slate-700 flex-shrink-0 flex items-center justify-center">
-                  <img src="dhruvil.jpg" alt="Dhruvil Patel" class="w-full h-full object-cover aspect-square">
+              <div>
+                <div class="flex gap-1 mb-3 text-amber-400">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current opacity-80" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                 </div>
-                <div class="font-bold text-xs text-white">Dhruvil Patel</div>
+                <p class="text-xs text-slate-300 leading-relaxed mb-4 sm:mb-6">"Sky Media completely transformed our brand's video content and social media presence. Their editing style, fast pacing, and creative storytelling doubled our Instagram engagement within just a month. Working with them was an absolute game-changer!"</p>
               </div>
+              <div class="font-bold text-xs text-white">Dhruvil Patel</div>
             </div>
 
+            <!-- Duplicate Review 2 (Rating: 4.2) -->
             <div class="w-[280px] sm:w-[340px] glass-panel text-white p-5 sm:p-6 rounded-2xl shadow-xl flex-shrink-0 border border-slate-700/60 bg-[#12141c]/90 flex flex-col justify-between">
-              <p class="text-xs text-slate-300 leading-relaxed mb-4 sm:mb-6">"Enrolling in Tharun Speaks Video Editing Cohort was one of my best decisions. Within a month, I got an internship at The Boring Edit, later joined Unacademy, and now I'm working at an AI startup. This cohort teaches way beyond editing; they teach storytelling, freelancing, content creation, and everything you actually need to grow. The best you can choose."</p>
-              <div class="flex items-center gap-3">
-                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden bg-slate-800 border border-slate-700 flex-shrink-0 flex items-center justify-center">
-                  <img src="deepak.jpg" alt="Deepak Divakar" class="w-full h-full object-cover aspect-square">
+              <div>
+                <div class="flex gap-1 mb-3 text-amber-400">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 text-slate-600 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                 </div>
-                <div class="font-bold text-xs text-white">Deepak Divakar</div>
+                <p class="text-xs text-slate-300 leading-relaxed mb-4 sm:mb-6">"We hired Sky Media for our web development and branding needs. Within weeks, they delivered a lightning-fast, high-performance website with stunning custom animations. Their attention to detail and modern UI design is top-notch."</p>
               </div>
+              <div class="font-bold text-xs text-white">Deepak Divakar</div>
+            </div>
+
+            <!-- Duplicate Review 3 (Rating: 5.0) -->
+            <div class="w-[280px] sm:w-[340px] glass-panel text-white p-5 sm:p-6 rounded-2xl shadow-xl flex-shrink-0 border border-slate-700/60 bg-[#12141c]/90 flex flex-col justify-between">
+              <div>
+                <div class="flex gap-1 mb-3 text-amber-400">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed mb-4 sm:mb-6">"As a startup, scaling our customer acquisition was tough until we partnered with Sky Media. Their Meta Ads campaigns generated a 4.5x ROAS for our store. They know exactly how to target the right audience and optimize budgets profitably."</p>
+              </div>
+              <div class="font-bold text-xs text-white">Akash</div>
+            </div>
+
+            <!-- Duplicate Review 4 (Rating: 3.5) -->
+            <div class="w-[280px] sm:w-[340px] glass-panel text-white p-5 sm:p-6 rounded-2xl shadow-xl flex-shrink-0 border border-slate-700/60 bg-[#12141c]/90 flex flex-col justify-between">
+              <div>
+                <div class="flex gap-1 mb-3 text-amber-400">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 text-slate-600 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 text-slate-600 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed mb-4 sm:mb-6">"Sky Media handles our complete video production and social media marketing. Their team is extremely professional, creative, and always delivers projects on time. If you are serious about scaling online, this is the team."</p>
+              </div>
+              <div class="font-bold text-xs text-white">Satwik</div>
             </div>
 
           </div>
@@ -628,64 +656,140 @@
         <div class="flex overflow-hidden w-full relative">
           <div class="flex gap-4 sm:gap-6 animate-marquee-reverse shrink-0">
             
-            <!-- Review 5 -->
+            <!-- Review 5 (Rating: 4.6) -->
             <div class="w-[280px] sm:w-[340px] glass-panel text-white p-5 sm:p-6 rounded-2xl shadow-xl flex-shrink-0 border border-slate-700/60 bg-[#12141c]/90 flex flex-col justify-between">
-              <p class="text-xs text-slate-300 leading-relaxed mb-4 sm:mb-6">"Hey guys, I am Padmesh, 19 years old, and currently studying in the UK. I am a student of Tharun's first cohort, and it was a game-changer for me. I went from a beginner to a pro at Premiere Pro and got the chance to work with one of my favourite creators, Tharun Speaks. This cohort is literally insane, it doesn't just teach you how to edit the best videos, but will help you grow in social media."</p>
-              <div class="flex items-center gap-3">
-                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden bg-slate-800 border border-slate-700 flex-shrink-0 flex items-center justify-center">
-                  <img src="padmesh.jpg" alt="Padmesh" class="w-full h-full object-cover aspect-square">
+              <div>
+                <div class="flex gap-1 mb-3 text-amber-400">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current opacity-60" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                 </div>
-                <div class="font-bold text-xs text-white">Padmesh</div>
+                <p class="text-xs text-slate-300 leading-relaxed mb-4 sm:mb-6">"Working with Sky Media for our corporate video production was an incredible experience. The visual quality, motion graphics, and sound design they brought gave our company profile a massive level-up."</p>
               </div>
+              <div class="font-bold text-xs text-white">Padmesh</div>
             </div>
 
-            <!-- Review 6 -->
+            <!-- Review 6 (Rating: 3.9) -->
             <div class="w-[280px] sm:w-[340px] glass-panel text-white p-5 sm:p-6 rounded-2xl shadow-xl flex-shrink-0 border border-slate-700/60 bg-[#12141c]/90 flex flex-col justify-between">
-              <p class="text-xs text-slate-300 leading-relaxed mb-4 sm:mb-6">"Hello everyone, I am Rohan, 20 years old from Jharkhand. I joined Cohort 3 while studying in college and ended up mentoring in Cohort 4. The community here is amazing, and people genuinely support you. I even got my first freelance client through it! A special shoutout to Vishi, our senior mentor!! I am even paying my own college fees through freelancing."</p>
-              <div class="flex items-center gap-3">
-                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden bg-slate-800 border border-slate-700 flex-shrink-0 flex items-center justify-center">
-                  <img src="rohan.jpg" alt="Rohan" class="w-full h-full object-cover aspect-square">
+              <div>
+                <div class="flex gap-1 mb-3 text-amber-400">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current opacity-75" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 text-slate-600 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                 </div>
-                <div class="font-bold text-xs text-white">Rohan</div>
+                <p class="text-xs text-slate-300 leading-relaxed mb-4 sm:mb-6">"Their social media management and content strategy helped us build an active community from scratch. The consistency and creative direction from the Sky Media directors are simply phenomenal."</p>
               </div>
+              <div class="font-bold text-xs text-white">Rohan</div>
             </div>
 
-            <!-- Review 7 -->
+            <!-- Review 7 (Rating: 4.9) -->
             <div class="w-[280px] sm:w-[340px] glass-panel text-white p-5 sm:p-6 rounded-2xl shadow-xl flex-shrink-0 border border-slate-700/60 bg-[#12141c]/90 flex flex-col justify-between">
-              <p class="text-xs text-slate-300 leading-relaxed mb-4 sm:mb-6">"I joined Cohort 1 with zero direction in life, and it completely changed my life. After the cohort, I mastered editing, left college, and moved to Bangalore to join Tharun Speaks' team. Since then, I've been earning in lakhs and also started an Instagram page 'indian video school' and grew it to 50k in just 70 days. This cohort doesn't just teach me editing; it gave me confidence."</p>
-              <div class="flex items-center gap-3">
-                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden bg-slate-800 border border-slate-700 flex-shrink-0 flex items-center justify-center">
-                  <img src="prachi.jpg" alt="Prachi" class="w-full h-full object-cover aspect-square">
+              <div>
+                <div class="flex gap-1 mb-3 text-amber-400">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current opacity-90" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                 </div>
-                <div class="font-bold text-xs text-white">Prachi</div>
+                <p class="text-xs text-slate-300 leading-relaxed mb-4 sm:mb-6">"Sky Media designed and optimized our agency website with custom animations. It instantly boosted our brand credibility and brought in high-ticket international clients within the first month!"</p>
               </div>
+              <div class="font-bold text-xs text-white">Prachi</div>
             </div>
 
-            <!-- Duplicate Set for Lane 2 Seamless Loop -->
+            <!-- Review 8 (Rating: 4.4) -->
             <div class="w-[280px] sm:w-[340px] glass-panel text-white p-5 sm:p-6 rounded-2xl shadow-xl flex-shrink-0 border border-slate-700/60 bg-[#12141c]/90 flex flex-col justify-between">
-              <p class="text-xs text-slate-300 leading-relaxed mb-4 sm:mb-6">"Hey guys, I am Padmesh, 19 years old, and currently studying in the UK. I am a student of Tharun's first cohort, and it was a game-changer for me. I went from a beginner to a pro at Premiere Pro and got the chance to work with one of my favourite creators, Tharun Speaks."</p>
-              <div class="flex items-center gap-3">
-                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden bg-slate-800 border border-slate-700 flex-shrink-0 flex items-center justify-center">
-                  <img src="padmesh.jpg" alt="Padmesh" class="w-full h-full object-cover aspect-square">
+              <div>
+                <div class="flex gap-1 mb-3 text-amber-400">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 text-slate-600 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
                 </div>
-                <div class="font-bold text-xs text-white">Padmesh</div>
+                <p class="text-xs text-slate-300 leading-relaxed mb-4 sm:mb-6">"From running high-converting Meta ad campaigns to producing engaging reels, Sky Media handles everything seamlessly. They truly understand modern digital marketing and creative execution."</p>
               </div>
+              <div class="font-bold text-xs text-white">Aman Verma</div>
+            </div>
+
+            <!-- Exact Duplicate Set for Lane 2 Seamless Loop -->
+            <!-- Duplicate Review 5 (Rating: 4.6) -->
+            <div class="w-[280px] sm:w-[340px] glass-panel text-white p-5 sm:p-6 rounded-2xl shadow-xl flex-shrink-0 border border-slate-700/60 bg-[#12141c]/90 flex flex-col justify-between">
+              <div>
+                <div class="flex gap-1 mb-3 text-amber-400">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current opacity-60" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed mb-4 sm:mb-6">"Working with Sky Media for our corporate video production was an incredible experience. The visual quality, motion graphics, and sound design they brought gave our company profile a massive level-up."</p>
+              </div>
+              <div class="font-bold text-xs text-white">Padmesh</div>
+            </div>
+
+            <!-- Duplicate Review 6 (Rating: 3.9) -->
+            <div class="w-[280px] sm:w-[340px] glass-panel text-white p-5 sm:p-6 rounded-2xl shadow-xl flex-shrink-0 border border-slate-700/60 bg-[#12141c]/90 flex flex-col justify-between">
+              <div>
+                <div class="flex gap-1 mb-3 text-amber-400">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current opacity-75" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 text-slate-600 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed mb-4 sm:mb-6">"Their social media management and content strategy helped us build an active community from scratch. The consistency and creative direction from the Sky Media directors are simply phenomenal."</p>
+              </div>
+              <div class="font-bold text-xs text-white">Rohan</div>
+            </div>
+
+            <!-- Duplicate Review 7 (Rating: 4.9) -->
+            <div class="w-[280px] sm:w-[340px] glass-panel text-white p-5 sm:p-6 rounded-2xl shadow-xl flex-shrink-0 border border-slate-700/60 bg-[#12141c]/90 flex flex-col justify-between">
+              <div>
+                <div class="flex gap-1 mb-3 text-amber-400">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current opacity-90" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed mb-4 sm:mb-6">"Sky Media designed and optimized our agency website with custom animations. It instantly boosted our brand credibility and brought in high-ticket international clients within the first month!"</p>
+              </div>
+              <div class="font-bold text-xs text-white">Prachi</div>
+            </div>
+
+            <!-- Duplicate Review 8 (Rating: 4.4) -->
+            <div class="w-[280px] sm:w-[340px] glass-panel text-white p-5 sm:p-6 rounded-2xl shadow-xl flex-shrink-0 border border-slate-700/60 bg-[#12141c]/90 flex flex-col justify-between">
+              <div>
+                <div class="flex gap-1 mb-3 text-amber-400">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 text-slate-600 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed mb-4 sm:mb-6">"From running high-converting Meta ad campaigns to producing engaging reels, Sky Media handles everything seamlessly. They truly understand modern digital marketing and creative execution."</p>
+              </div>
+              <div class="font-bold text-xs text-white">Aman Verma</div>
             </div>
 
           </div>
         </div>
 
       </div>
-
     </div>
   </section>
 
   <!-- PAGE 4: RESULTS OF SKY MEDIA (GROWTH METRICS CARDS) -->
-  <section id="results" class="py-20 sm:py-24 relative">
+  <section id="results" class="py-12 sm:py-16 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Header -->
-      <div class="section-header text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+      <div class="section-header text-center max-w-3xl mx-auto mb-8 sm:mb-12">
         <h2 class="text-xs font-bold text-[#FF5500] tracking-widest uppercase mb-2 sm:mb-3">Proven Performance Numbers</h2>
         <p class="text-3xl sm:text-5xl font-black tracking-tight text-white">
           Results of <span class="text-[#FF5500]">Sky Media</span>
@@ -749,11 +853,11 @@
   </section>
 
   <!-- PAGE 5: BEHIND THE SCENES (Responsive Vertical Videos) -->
-  <section id="bts" class="py-20 sm:py-24 relative bg-slate-950/60 border-t border-slate-800">
+  <section id="bts" class="py-12 sm:py-16 relative bg-slate-950/60 border-t border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Header -->
-      <div class="section-header text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+      <div class="section-header text-center max-w-3xl mx-auto mb-8 sm:mb-12">
         <h2 class="text-xs font-bold text-[#FF5500] tracking-widest uppercase mb-2 sm:mb-3">Studio Production Clips</h2>
         <p class="text-3xl sm:text-5xl font-black tracking-tight text-white">
           Behind The Scenes At <span class="text-[#FF5500]">Sky Media</span>
@@ -765,7 +869,7 @@
         
         <!-- Video 1 -->
         <div class="relative w-full h-[340px] sm:h-[420px] md:h-[450px] rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-800 bg-slate-900 group">
-          <video autoplay loop muted playsinline class="w-full h-full object-cover">
+          <video autoplay loop muted playsinline webkit-playsinline class="w-full h-full object-cover">
             <source src="data/bts .1.mp4" type="video/mp4">
           </video>
           <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
@@ -774,7 +878,7 @@
 
         <!-- Video 2 -->
         <div class="relative w-full h-[340px] sm:h-[420px] md:h-[450px] rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-800 bg-slate-900 group">
-          <video autoplay loop muted playsinline class="w-full h-full object-cover">
+          <video autoplay loop muted playsinline webkit-playsinline class="w-full h-full object-cover">
             <source src="data/bts 02.mp4" type="video/mp4">
           </video>
           <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
@@ -783,7 +887,7 @@
 
         <!-- Video 3 -->
         <div class="relative w-full h-[340px] sm:h-[420px] md:h-[450px] rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-800 bg-slate-900 group">
-          <video autoplay loop muted playsinline class="w-full h-full object-cover">
+          <video autoplay loop muted playsinline webkit-playsinline class="w-full h-full object-cover">
             <source src="data/bts 03.mp4" type="video/mp4">
           </video>
           <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
@@ -795,7 +899,7 @@
   </section>
 
   <!-- PAGE 6: ABOUT SKY MEDIA (MISSION & VISION CARDS) -->
-  <section id="about" class="py-20 sm:py-24 relative">
+  <section id="about" class="py-12 sm:py-16 relative">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       
       <!-- Title -->
@@ -809,19 +913,19 @@
       </p>
 
       <!-- Stat Highlight Callout Boxes -->
-      <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mb-12 sm:mb-16">
+      <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mb-10 sm:mb-12">
         <div class="px-6 py-4 sm:px-8 sm:py-6 rounded-2xl sm:rounded-3xl bg-[#FF5500] text-slate-950 font-black shadow-xl">
           <div class="text-3xl sm:text-4xl font-extrabold">50M+</div>
           <div class="text-[10px] sm:text-xs uppercase tracking-wider font-bold">Total Views Generated</div>
         </div>
         <div class="px-6 py-4 sm:px-8 sm:py-6 rounded-2xl sm:rounded-3xl bg-[#FF5500] text-slate-950 font-black shadow-xl">
-          <div class="text-3xl sm:text-4xl font-extrabold">100+</div>
-          <div class="text-[10px] sm:text-xs uppercase tracking-wider font-bold">Global Creators Scaled</div>
+          <div class="text-3xl sm:text-4xl font-extrabold">50+</div>
+          <div class="text-[10px] sm:text-xs uppercase tracking-wider font-bold">Global Business Scaled</div>
         </div>
       </div>
 
       <!-- Mission & Vision Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 text-left mb-12 sm:mb-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 text-left mb-10 sm:mb-12">
         
         <!-- Mission Card -->
         <div class="bg-white text-slate-950 p-6 sm:p-10 rounded-2xl sm:rounded-3xl shadow-2xl flex flex-col justify-between">
@@ -852,7 +956,7 @@
       </div>
 
       <!-- Behind The Scenes / Team Image -->
-      <div class="w-full mt-6 sm:mt-8 relative">
+      <div class="w-full mt-4 sm:mt-6 relative">
         <div class="text-center mb-4 sm:mb-6">
           <span class="text-xs font-bold text-[#FF5500] tracking-widest uppercase">Behind The Success</span>
           <h3 class="text-xl sm:text-3xl font-extrabold text-white mt-1">The Mindset & Team Behind Sky Media</h3>
@@ -866,79 +970,138 @@
       </div>
     </div>
   </section>
+<!-- PAGE 7: GET IN TOUCH (CONTACT FORM & SOCIAL LINKS) -->
+<section id="contact" class="py-12 sm:py-16 relative bg-slate-950/70 border-t border-slate-800">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header -->
+    <div class="section-header text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+      <h2 class="text-xs font-bold text-[#FF5500] tracking-widest uppercase mb-2 sm:mb-3">Let's Build Together</h2>
+      <p class="text-3xl sm:text-5xl font-black tracking-tight text-white">
+        Get In Touch With <span class="text-[#FF5500]">Sky Media</span>
+      </p>
+    </div>
 
-  <!-- PAGE 7: GET IN TOUCH (CONTACT FORM & SOCIAL LINKS) -->
-  <section id="contact" class="py-20 sm:py-24 relative bg-slate-950/70 border-t border-slate-800">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Form Box -->
+    <div class="glass-panel rounded-2xl sm:rounded-3xl p-5 sm:p-10 md:p-12 relative border border-slate-700">
       
-      <!-- Header -->
-      <div class="section-header text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-        <h2 class="text-xs font-bold text-[#FF5500] tracking-widest uppercase mb-2 sm:mb-3">Let's Build Together</h2>
-        <p class="text-3xl sm:text-5xl font-black tracking-tight text-white">
-          Get In Touch With <span class="text-[#FF5500]">Sky Media</span>
-        </p>
-      </div>
-
-      <!-- Form Box -->
-      <div class="glass-panel rounded-2xl sm:rounded-3xl p-5 sm:p-10 md:p-12 relative border border-slate-700">
+      <!-- Form with AJAX submit handler -->
+      <form id="skymedia-contact-form" onsubmit="handleFormSubmit(event)" class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
         
-        <form id="skymedia-contact-form" class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-          
-          <div>
-            <label class="block text-xs font-bold text-slate-300 uppercase mb-1.5 sm:mb-2">Your Name</label>
-            <input type="text" required placeholder="e.g. Alex Turner" class="w-full px-3.5 py-3 sm:px-4 sm:py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs sm:text-sm focus:outline-none focus:border-[#FF5500] transition-colors">
-          </div>
-
-          <div>
-            <label class="block text-xs font-bold text-slate-300 uppercase mb-1.5 sm:mb-2">Your Email</label>
-            <input type="email" required placeholder="alex@company.com" class="w-full px-3.5 py-3 sm:px-4 sm:py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs sm:text-sm focus:outline-none focus:border-[#FF5500] transition-colors">
-          </div>
-
-          <div>
-            <label class="block text-xs font-bold text-slate-300 uppercase mb-1.5 sm:mb-2">Service Needed</label>
-            <select required class="w-full px-3.5 py-3 sm:px-4 sm:py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs sm:text-sm focus:outline-none focus:border-[#FF5500] transition-colors">
-              <option value="reelmaking">Reelmaking & Short-Form Content</option>
-              <option value="editing">Long-Form Video Editing</option>
-              <option value="management">Channel Growth & Management</option>
-              <option value="shooting">On-Site Shooting & Production</option>
-              <option value="full-bundle">Full-Stack Sky Media Bundle</option>
-            </select>
-          </div>
-
-          <div>
-            <label class="block text-xs font-bold text-slate-300 uppercase mb-1.5 sm:mb-2">Estimated Monthly Budget</label>
-            <select required class="w-full px-3.5 py-3 sm:px-4 sm:py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs sm:text-sm focus:outline-none focus:border-[#FF5500] transition-colors">
-              <option value="b1">$500 - $1,500 / month</option>
-              <option value="b2">$1,500 - $3,000 / month</option>
-              <option value="b3">$3,000 - $5,000+ / month</option>
-            </select>
-          </div>
-
-          <div class="sm:col-span-2">
-            <label class="block text-xs font-bold text-slate-300 uppercase mb-1.5 sm:mb-2">Project Details & Vision</label>
-            <textarea rows="4" required placeholder="Tell us about your brand, current channel link, and goals..." class="w-full px-3.5 py-3 sm:px-4 sm:py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs sm:text-sm focus:outline-none focus:border-[#FF5500] transition-colors resize-none"></textarea>
-          </div>
-
-          <div class="sm:col-span-2 mt-1 sm:mt-2">
-            <button type="submit" class="w-full py-3.5 sm:py-4 rounded-xl bg-[#FF5500] hover:bg-[#ff6611] text-slate-950 font-black text-sm sm:text-base transition-all hover:scale-[1.01] flex items-center justify-center gap-2 shadow-lg shadow-[#FF5500]/25">
-              <span>Send Message to Sky Media</span>
-              <i data-lucide="send" class="w-4 h-4 sm:w-5 sm:h-5 text-slate-950"></i>
-            </button>
-          </div>
-
-        </form>
-
-        <!-- Form Success State -->
-        <div id="form-success-msg" class="hidden flex-col items-center justify-center py-10 sm:py-12 text-center">
-          <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#FF5500]/20 text-[#FF5500] flex items-center justify-center mb-4">
-            <i data-lucide="check-circle-2" class="w-7 h-7 sm:w-8 sm:h-8"></i>
-          </div>
-          <h4 class="text-xl sm:text-2xl font-bold text-white mb-2">Message Received!</h4>
-          <p class="text-slate-400 text-xs sm:text-sm max-w-md">Our team at Sky Media will review your project details and get back to you within 24 hours.</p>
+        <!-- Yahan apni mili hui Web3Forms Access Key daal de -->
+        <input type="hidden" name="access_key" value="ee76f1d5-3864-4c15-9f91-92fa1ae65955">
+        
+        <div>
+          <label class="block text-xs font-bold text-slate-300 uppercase mb-1.5 sm:mb-2">Your Name</label>
+          <input type="text" name="name" required placeholder="e.g. Alex Turner" class="w-full px-3.5 py-3 sm:px-4 sm:py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs sm:text-sm focus:outline-none focus:border-[#FF5500] transition-colors">
         </div>
 
+        <div>
+          <label class="block text-xs font-bold text-slate-300 uppercase mb-1.5 sm:mb-2">Your Email</label>
+          <input type="email" name="email" required placeholder="alex@company.com" class="w-full px-3.5 py-3 sm:px-4 sm:py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs sm:text-sm focus:outline-none focus:border-[#FF5500] transition-colors">
+        </div>
+
+        <!-- Phone Number Field Added Here -->
+        <div class="sm:col-span-2">
+          <label class="block text-xs font-bold text-slate-300 uppercase mb-1.5 sm:mb-2">Phone Number</label>
+          <input type="tel" name="phone" required placeholder="e.g. +91 98765 43210" class="w-full px-3.5 py-3 sm:px-4 sm:py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs sm:text-sm focus:outline-none focus:border-[#FF5500] transition-colors">
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-300 uppercase mb-1.5 sm:mb-2">Service Needed</label>
+          <select name="service" required class="w-full px-3.5 py-3 sm:px-4 sm:py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs sm:text-sm focus:outline-none focus:border-[#FF5500] transition-colors">
+            <option value="Reelmaking & Short-Form Content">Reelmaking & Short-Form Content</option>
+            <option value="Long-Form Video Editing">Long-Form Video Editing</option>
+            <option value="Channel Growth & Management">Channel Growth & Management</option>
+            <option value="On-Site Shooting & Production">On-Site Shooting & Production</option>
+            <option value="full-bundle">Full-Stack Sky Media Bundle</option>
+            <option value="other services">Other </option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-300 uppercase mb-1.5 sm:mb-2">Estimated Monthly Budget</label>
+          <select name="budget" required class="w-full px-3.5 py-3 sm:px-4 sm:py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs sm:text-sm focus:outline-none focus:border-[#FF5500] transition-colors">
+            <option value="₹25,000 - ₹40,000">₹25,000 - ₹40,000 / month</option>
+            <option value="₹40,000 - ₹60,000">₹40,000 - ₹60,000 / month</option>
+            <option value="₹60,000 - ₹1,00,000+">₹60,000 - ₹1,00,000+ / month</option>
+          </select>
+        </div>
+
+        <div class="sm:col-span-2">
+          <label class="block text-xs font-bold text-slate-300 uppercase mb-1.5 sm:mb-2">Project Details & Vision</label>
+          <textarea name="message" rows="4" required placeholder="Tell us about your brand, current channel link, and goals..." class="w-full px-3.5 py-3 sm:px-4 sm:py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs sm:text-sm focus:outline-none focus:border-[#FF5500] transition-colors resize-none"></textarea>
+        </div>
+
+        <div class="sm:col-span-2 mt-1 sm:mt-2">
+          <button type="submit" id="submit-btn" class="w-full py-3.5 sm:py-4 rounded-xl bg-[#FF5500] hover:bg-[#ff6611] text-slate-950 font-black text-sm sm:text-base transition-all hover:scale-[1.01] flex items-center justify-center gap-2 shadow-lg shadow-[#FF5500]/25">
+            <span>Send Message to Sky Media</span>
+          </button>
+        </div>
+
+      </form>
+
+      <!-- Form Success State (Hidden by default) -->
+      <div id="form-success-msg" class="hidden flex-col items-center justify-center py-10 sm:py-12 text-center">
+        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#FF5500]/20 text-[#FF5500] flex items-center justify-center mb-4">
+          <svg class="w-7 h-7 sm:w-8 sm:h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+        </div>
+        <h4 class="text-xl sm:text-2xl font-bold text-white mb-2">Message Received!</h4>
+        <p class="text-slate-400 text-xs sm:text-sm max-w-md">Our team at Sky Media will review your project details and get back to you within 24 hours.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- JavaScript for Smooth Submission without page refresh -->
+<script>
+async function handleFormSubmit(event) {
+    event.preventDefault();
+    const form = document.getElementById('skymedia-contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const successMsg = document.getElementById('form-success-msg');
+    
+    // Change button text while sending
+    submitBtn.innerHTML = "<span>Sending...</span>";
+    submitBtn.disabled = true;
+
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        });
+
+        const result = await response.json();
+        if (response.status == 200) {
+            // Hide form and show success message smoothly
+            form.style.display = 'none';
+            successMsg.style.display = 'flex';
+        } else {
+            alert(result.message || "Something went wrong!");
+            submitBtn.innerHTML = "<span>Send Message to Sky Media</span>";
+            submitBtn.disabled = false;
+        }
+    } catch (error) {
+        console.error(error);
+        alert("Network error! Please try again.");
+        submitBtn.innerHTML = "<span>Send Message to Sky Media</span>";
+        submitBtn.disabled = false;
+    }
+}
+</script>
+
+
         <!-- Social Media Handles Ribbon -->
-        <div class="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 text-center sm:text-left">
+        <div class="mt-6 sm:mt-10 pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 text-center sm:text-left">
           <div>
             <div class="text-[11px] sm:text-xs font-bold text-slate-400 uppercase">Connect With Sky Media</div>
             <div class="text-xs sm:text-sm font-bold text-[#FF5500]">@skymedia.official</div>
@@ -946,11 +1109,11 @@
           
           <div class="flex items-center gap-3 sm:gap-4 text-slate-300">
             <!-- Instagram -->
-            <a href="https://instagram.com" target="_blank" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-slate-900 border border-slate-700 hover:border-[#FF5500] hover:text-[#FF5500] flex items-center justify-center transition-colors">
+            <a href="https://www.instagram.com/sky_media_04?igsi=bHhrZGpjYnY4aGNt&utm_source=qr" target="_blank" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-slate-900 border border-slate-700 hover:border-[#FF5500] hover:text-[#FF5500] flex items-center justify-center transition-colors">
               <svg class="w-4 h-4 sm:w-5 sm:h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
             </a>
             <!-- WhatsApp -->
-            <a href="https://wa.me/" target="_blank" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-slate-900 border border-slate-700 hover:border-[#FF5500] hover:text-[#FF5500] flex items-center justify-center transition-colors">
+            <a href="https://wa.me/8097742204" target="_blank" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-slate-900 border border-slate-700 hover:border-[#FF5500] hover:text-[#FF5500] flex items-center justify-center transition-colors">
               <svg class="w-4 h-4 sm:w-5 sm:h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
             </a>
             <!-- LinkedIn -->
@@ -966,7 +1129,7 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="py-8 sm:py-12 border-t border-slate-800 bg-slate-950 text-slate-400 text-xs">
+  <footer class="py-6 sm:py-8 border-t border-slate-800 bg-slate-950 text-slate-400 text-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6">
       
       <!-- Left: Logo & Copyright -->

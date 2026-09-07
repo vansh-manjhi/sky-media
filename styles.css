@@ -1,4 +1,4 @@
-/* Custom CSS for Sky Media - Black, White & Orange Text Theme */
+/* Custom CSS for Sky Media - Black, White & Orange Text Theme (Fully Responsive & Aligned) */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,400;1,600;1,700&display=swap');
 
@@ -18,11 +18,13 @@
   scroll-behavior: smooth;
 }
 
-body {
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden !important;
   background-color: var(--bg-black);
   color: #f8fafc;
   font-family: var(--font-sans);
-  overflow-x: hidden;
   margin: 0;
   padding: 0;
 }
@@ -41,94 +43,67 @@ body {
   border-color: rgba(255, 85, 0, 0.4);
 }
 
-  /* Infinite Auto-Running Video Marquee (Page 1) — NEVER PAUSES ON HOVER */
-  .video-marquee-container {
-    display: flex;
-    overflow: hidden;
-    user-select: none;
-    gap: 1.5rem;
-    width: 100%;
-    mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
-  }
+/* Page 1: Infinite Auto-Running Video Marquee (100% Uniform Card Spacing) */
+.video-marquee-container {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  width: 100%;
+  max-width: 100vw;
+  mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+}
 
-  .video-marquee-content {
-    flex-shrink: 0;
-    display: flex;
-    justify-content: space-around;
-    gap: 1.5rem;
-    min-width: 100%;
-    animation: marqueeVideo 22s linear infinite;
-  }
+.video-marquee-content {
+  flex-shrink: 0;
+  display: flex;
+  gap: 1.5rem;
+  padding-right: 1.5rem; /* Equal spacing between end of set 1 and start of set 2 */
+  width: max-content;
+  animation: marqueeVideo 22s linear infinite;
+}
 
-  @keyframes marqueeVideo {
-    from { transform: translateX(0); }
-    to { transform: translateX(-100%); }
-  }
+@keyframes marqueeVideo {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
 
-/* Page 2: Center Cutout & Balanced Spacing (Fully Responsive) */
+/* Page 2: Center Cutout & Perfectly Aligned Left/Right Service Cards */
 .cutout-wrapper-p2 {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 450px;
+  min-height: 480px;
+  width: 100%;
   overflow: visible;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 .cutout-ring {
   position: absolute;
-  width: 500px;
-  height: 500px;
+  width: 580px;
+  height: 580px;
   border: 1px solid rgba(255, 85, 0, 0.2);
   border-radius: 50%;
   z-index: 0;
+  pointer-events: none;
 }
 
 .cutout-img-box-p2 {
   position: relative;
   z-index: 5;
-  width: 240px; 
-  height: 320px;
-  border-radius: 1rem;
+  width: 250px; 
+  height: 340px;
+  border-radius: 1.25rem;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 85, 0, 0.25);
 }
 
-/* Floating Service Cards - Default (Mobile: Stacked/Grid Style) */
-.service-pop-card {
-  background: rgba(15, 20, 30, 0.95);
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 85, 0, 0.4);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-  border-radius: 1.25rem;
-  padding: 0.85rem 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  width: 100%;
-  max-width: 280px;
-  transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.service-pop-card:hover {
-  border-color: var(--accent-orange);
-  box-shadow: 0 0 25px var(--accent-orange-glow);
-}
-
-/* Desktop par Absolute Orbit Layout apply hoga */
 @media (min-width: 1024px) {
-  .cutout-wrapper-p2 {
-    min-height: 380px;
-  }
-  
-  .cutout-ring {
-    width: 600px;
-    height: 600px;
-  }
-
   .cutout-img-box-p2 {
-    width: 280px;
+    width: 270px;
     height: 350px;
     border-radius: 0 !important;
     overflow: visible !important;
@@ -136,18 +111,61 @@ body {
     background: transparent !important;
     box-shadow: none !important;
   }
+}
 
+/* Floating Interactive Service Cards */
+.service-pop-card {
+  background: rgba(15, 20, 30, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 85, 0, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  border-radius: 1.25rem;
+  padding: 0.85rem 1.1rem;
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  text-decoration: none;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.service-pop-card:hover {
+  transform: translateY(-3px) scale(1.03);
+  border-color: var(--accent-orange);
+  box-shadow: 0 0 28px var(--accent-orange-glow);
+}
+
+/* Desktop Absolute Position for Page 2 (Left 2 Aligned, Right 2 Aligned) */
+@media (min-width: 1024px) {
   .service-pop-card {
     position: absolute;
     z-index: 10;
-    width: 250px;
+    width: 270px;
+    max-width: 270px;
   }
 
-  /* Individual absolute positions for desktop */
-  #pop-card-1 { transform: translate(-260px, -80px); }
-  #pop-card-2 { transform: translate(260px, -80px); }
-  #pop-card-3 { transform: translate(-260px, 80px); }
-  #pop-card-4 { transform: translate(260px, 80px); }
+  /* Left Column (Aligned Straight Vertically) */
+  #pop-card-1 { left: 40px; top: 40px; }
+  #pop-card-3 { left: 40px; bottom: 40px; }
+
+  /* Right Column (Aligned Straight Vertically) */
+  #pop-card-2 { right: 40px; top: 40px; }
+  #pop-card-4 { right: 40px; bottom: 40px; }
+
+  #pop-card-1:hover { transform: translateY(-4px) scale(1.03); }
+  #pop-card-2:hover { transform: translateY(-4px) scale(1.03); }
+  #pop-card-3:hover { transform: translateY(-4px) scale(1.03); }
+  #pop-card-4:hover { transform: translateY(-4px) scale(1.03); }
+}
+
+@media (max-width: 1023px) {
+  .cutout-wrapper-p2 {
+    min-height: auto;
+    padding: 10px 0;
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
 
 /* Page 3: Client Circle Marquee — NEVER PAUSES ON HOVER */
@@ -155,16 +173,15 @@ body {
   display: flex;
   overflow: hidden;
   user-select: none;
-  gap: 2.5rem;
   width: 100%;
 }
 
 .client-marquee-content {
   flex-shrink: 0;
   display: flex;
-  justify-content: space-around;
   gap: 2.5rem;
-  min-width: 100%;
+  padding-right: 2.5rem;
+  width: max-content;
   animation: marqueeClients 20s linear infinite;
 }
 
@@ -184,6 +201,14 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
   overflow: hidden;
   padding: 8px;
+}
+
+@media (max-width: 639px) {
+  .client-circle {
+    width: 64px;
+    height: 64px;
+    padding: 5px;
+  }
 }
 
 /* Custom Scrollbar */
@@ -245,9 +270,15 @@ body {
 
 /* Custom utility for Video Card */
 .video-card {
-  width: 320px;
+  width: 280px;
+  flex-shrink: 0;
 }
 @media (min-width: 640px) {
+  .video-card {
+    width: 340px;
+  }
+}
+@media (min-width: 1024px) {
   .video-card {
     width: 380px;
   }
@@ -264,9 +295,7 @@ body {
   transform: scale(1.05);
 }
 
-
-
-
+/* Perfect 1-to-1 Infinite Marquee Animation for Reviews */
 @keyframes marquee-left {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -280,15 +309,17 @@ body {
 .animate-marquee {
   display: flex;
   gap: 1.5rem;
+  width: max-content;
   animation: marquee-left 35s linear infinite;
 }
 
 .animate-marquee-reverse {
   display: flex;
   gap: 1.5rem;
+  width: max-content;
   animation: marquee-right 35s linear infinite;
 }
-/* Image ko perfectly circular aur aspect ratio maintain rakhne ke liye */
+
 img {
   max-width: 100%;
   height: auto;

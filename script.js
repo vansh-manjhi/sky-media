@@ -1,4 +1,4 @@
-/* Script for Sky Media - Black, White & Orange Theme & Animations (Fully Responsive) */
+/* Script for Sky Media - Black, White & Orange Theme & Animations (Fully Responsive & Aligned) */
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -17,35 +17,35 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.from('.hero-subtitle', { opacity: 0, y: 20, duration: 0.8, delay: 0.4, ease: 'power3.out' });
     gsap.from('.hero-cta-group', { opacity: 0, y: 20, duration: 0.8, delay: 0.6, ease: 'power3.out' });
 
-   // PAGE 2: Services Cutout POP ANIMATION (Only for Desktop Large Screens)
+    // PAGE 2: Services Cutout POP ENTRANCE (Preserving CSS Left 2 / Right 2 Vertical Alignment)
     if (window.innerWidth >= 1024) {
-      const serviceCards = [
-        { el: '#pop-card-1' }, 
-        { el: '#pop-card-2' },  
-        { el: '#pop-card-3' },  
-        { el: '#pop-card-4' }   
-      ];
+      const serviceCards = ['#pop-card-1', '#pop-card-2', '#pop-card-3', '#pop-card-4'];
 
-      serviceCards.forEach(card => {
-        gsap.set(card.el, { scale: 0, opacity: 0 });
+      serviceCards.forEach((cardId, idx) => {
+        gsap.from(cardId, {
+          scrollTrigger: { trigger: '#services', start: 'top 75%' },
+          scale: 0,
+          opacity: 0,
+          duration: 0.65,
+          delay: idx * 0.1,
+          ease: 'back.out(1.5)',
+          force3D: true
+        });
       });
-
-      ScrollTrigger.create({
-        trigger: '#services',
-        start: 'top 75%',
-        onEnter: () => {
-          serviceCards.forEach((card, idx) => {
-            gsap.to(card.el, {
-              scale: 1,
-              opacity: 1,
-              duration: 0.9,
-              delay: idx * 0.12,
-              ease: 'back.out(1.8)'
-            });
-          });
-        }
+    } else {
+      // Mobile / Tablet: Smooth Fade In
+      gsap.utils.toArray('.service-pop-card').forEach((card, idx) => {
+        gsap.from(card, {
+          scrollTrigger: { trigger: card, start: 'top 85%' },
+          opacity: 0,
+          y: 25,
+          duration: 0.6,
+          delay: idx * 0.08,
+          ease: 'power2.out'
+        });
       });
     }
+
     // Page 4: Growth Metric Cards Reveal
     gsap.utils.toArray('.metric-card').forEach((card, index) => {
       gsap.from(card, {
