@@ -154,3 +154,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Page ki saari videos ko select karo
+  const allVideos = document.querySelectorAll('video');
+
+  allVideos.forEach(video => {
+    video.setAttribute('controls', 'true');
+    video.setAttribute('controlsList', 'nodownload noremoteplayback');
+    video.setAttribute('disablePictureInPicture', 'true');
+    video.setAttribute('preload', 'metadata');
+  });
+});

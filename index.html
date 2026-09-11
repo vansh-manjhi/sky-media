@@ -39,82 +39,115 @@
 <body class="bg-[#05070B] text-slate-100 antialiased relative overflow-x-hidden selection:bg-[#FF5500] selection:text-black">
 
   <!-- NAVIGATION HEADER -->
-  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 mt-2 sm:mt-4">
-      <nav class="glass-panel rounded-full px-4 sm:px-6 py-2 flex items-center justify-between">
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 mt-2 sm:mt-4">
+    <nav class="glass-panel rounded-full px-4 sm:px-6 py-2 flex items-center justify-between">
+      
+      <!-- Sky Media Brand Logo -->
+      <a href="index.html" class="flex items-center gap-2 group -ml-2 sm:-ml-4">
+        <img src="data/logo1.png" alt="Sky Media Logo" class="h-8 sm:h-10 w-auto object-contain group-hover:scale-105 transition-transform">
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <div class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-semibold text-slate-300">
+        <a href="index.html" class="hover:text-[#FF5500] transition-colors">Home</a>
         
-        <!-- Sky Media Brand Logo -->
-        <a href="#" class="flex items-center gap-2 group">
-          <img src="data/logo1.png" alt="Sky Media Logo" class="h-7 sm:h-9 w-auto object-contain group-hover:scale-105 transition-transform">
-        </a>
-
-        <!-- Desktop Nav Links -->
-        <div class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-semibold text-slate-300">
-          <a href="#home" class="hover:text-[#FF5500] transition-colors">Home</a>
-          <a href="#services" class="hover:text-[#FF5500] transition-colors">Services</a>
-          <a href="#clients" class="hover:text-[#FF5500] transition-colors">Clients</a>
-          <a href="#results" class="hover:text-[#FF5500] transition-colors">Results</a>
-          <a href="#bts" class="hover:text-[#FF5500] transition-colors">Behind The Scenes</a>
-          <a href="#about" class="hover:text-[#FF5500] transition-colors">About</a>
-          <a href="#contact" class="hover:text-[#FF5500] transition-colors">Contact</a>
+        <!-- SERVICES DROPDOWN MENU -->
+        <div class="relative group py-2">
+          <button class="flex items-center gap-1 hover:text-[#FF5500] transition-colors focus:outline-none">
+            Services <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
+          </button>
+          
+          <!-- Dropdown Box -->
+          <div class="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-60 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
+            <div class="glass-panel rounded-2xl p-2 bg-slate-950/95 border border-slate-800 shadow-2xl flex flex-col gap-1">
+              <a href="social-media.html" class="px-3 py-2 rounded-xl text-xs font-semibold text-slate-300 hover:text-white hover:bg-[#FF5500]/20 transition-colors">
+                 Social Media Marketing
+              </a>
+              <a href="video-production.html" class="px-3 py-2 rounded-xl text-xs font-semibold text-slate-300 hover:text-white hover:bg-[#FF5500]/20 transition-colors">
+                Video Production & Editing
+              </a>
+              <a href="web-development.html" class="px-3 py-2 rounded-xl text-xs font-semibold text-slate-300 hover:text-white hover:bg-[#FF5500]/20 transition-colors">
+                Web Development & Design
+              </a>
+              <a href="meta-ads.html" class="px-3 py-2 rounded-xl text-xs font-semibold text-slate-300 hover:text-white hover:bg-[#FF5500]/20 transition-colors">
+                Meta Ads Management
+              </a>
+            </div>
+          </div>
         </div>
 
-        <!-- Orange CTA Button -->
-        <div class="hidden sm:flex items-center gap-4">
-          <a href="#contact" class="px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-[#FF5500] hover:bg-[#ff6611] text-slate-950 font-extrabold text-xs sm:text-sm transition-all flex items-center gap-1.5 shadow-lg shadow-[#FF5500]/25 hover:scale-105">
-            <span>Get In Touch</span>
-            <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-950"></i>
-          </a>
-        </div>
+        <a href="#clients" class="hover:text-[#FF5500] transition-colors">Clients</a>
+        <a href="#results" class="hover:text-[#FF5500] transition-colors">Results</a>
+        <a href="#bts" class="hover:text-[#FF5500] transition-colors">Behind The Scenes</a>
+        <a href="#about" class="hover:text-[#FF5500] transition-colors">About</a>
+        <a href="#contact" class="hover:text-[#FF5500] transition-colors">Contact</a>
+      </div>
 
-        <!-- Mobile Menu Toggle -->
-        <button id="mobile-menu-toggle" class="md:hidden text-slate-300 hover:text-white p-1.5 focus:outline-none" aria-label="Toggle Navigation Menu">
-          <i data-lucide="menu" class="w-6 h-6"></i>
-        </button>
-      </nav>
-    </div>
-
-    <!-- Mobile Drawer -->
-    <div id="mobile-drawer" class="hidden md:hidden max-w-7xl mx-auto px-3 mt-2">
-      <div class="glass-panel rounded-2xl p-5 flex flex-col gap-3 text-center font-medium text-sm">
-        <a href="#home" class="py-1.5 text-slate-200 hover:text-[#FF5500]">Home</a>
-        <a href="#services" class="py-1.5 text-slate-200 hover:text-[#FF5500]">Services</a>
-        <a href="#clients" class="py-1.5 text-slate-200 hover:text-[#FF5500]">Clients & Reviews</a>
-        <a href="#results" class="py-1.5 text-slate-200 hover:text-[#FF5500]">Results</a>
-        <a href="#bts" class="py-1.5 text-slate-200 hover:text-[#FF5500]">Behind The Scenes</a>
-        <a href="#about" class="py-1.5 text-slate-200 hover:text-[#FF5500]">About</a>
-        <a href="#contact" class="py-2.5 mt-1 bg-[#FF5500] text-slate-950 rounded-xl font-extrabold flex items-center justify-center gap-2">
-          Get In Touch <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      <!-- Orange CTA Button -->
+      <div class="hidden sm:flex items-center gap-4">
+        <a href="#contact" class="px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-[#FF5500] hover:bg-[#ff6611] text-slate-950 font-extrabold text-xs sm:text-sm transition-all flex items-center gap-1.5 shadow-lg shadow-[#FF5500]/25 hover:scale-105">
+          <span>Get In Touch</span>
+          <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-950"></i>
         </a>
       </div>
-    </div>
-  </header>
 
-  <!-- PAGE 1: HOMEPAGE (HERO + BACKGROUND VIDEO + INFINITE UNPAUSING VIDEO MARQUEE) -->
-  <section id="home" class="relative pt-28 pb-12 sm:pt-36 sm:pb-16 overflow-hidden min-h-[85vh] sm:min-h-[90vh] flex flex-col justify-center">
+      <!-- Mobile Menu Toggle -->
+      <button id="mobile-menu-toggle" class="md:hidden text-slate-300 hover:text-white p-1.5 focus:outline-none" aria-label="Toggle Navigation Menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </nav>
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer" class="hidden md:hidden max-w-7xl mx-auto px-3 mt-2">
+    <div class="glass-panel rounded-2xl p-5 flex flex-col gap-3 text-center font-medium text-sm">
+      <a href="index.html" class="py-1.5 text-slate-200 hover:text-[#FF5500]">Home</a>
+      
+      <!-- Mobile Services Accordion/List -->
+      <div class="py-1 text-slate-200 font-semibold text-[#FF5500]">Services:</div>
+      <div class="flex flex-col gap-2 pl-4 text-xs">
+        <a href="social-media.html" class="py-1 text-slate-300 hover:text-[#FF5500]">↳ Social Media Marketing</a>
+        <a href="video-production.html" class="py-1 text-slate-300 hover:text-[#FF5500]">↳ Video Production</a>
+        <a href="web-development.html" class="py-1 text-slate-300 hover:text-[#FF5500]">↳  Web Development</a>
+        <a href="meta-ads.html" class="py-1 text-slate-300 hover:text-[#FF5500]">↳ Meta Ads Management</a>
+      </div>
+
+      <a href="#clients" class="py-1.5 text-slate-200 hover:text-[#FF5500]">Clients & Reviews</a>
+      <a href="#results" class="py-1.5 text-slate-200 hover:text-[#FF5500]">Results</a>
+      <a href="#bts" class="py-1.5 text-slate-200 hover:text-[#FF5500]">Behind The Scenes</a>
+      <a href="#about" class="py-1.5 text-slate-200 hover:text-[#FF5500]">About</a>
+      <a href="#contact" class="py-2.5 mt-1 bg-[#FF5500] text-slate-950 rounded-xl font-extrabold flex items-center justify-center gap-2">
+        Get In Touch <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      </a>
+    </div>
+  </div>
+</header>
+ <!-- PAGE 1: HOMEPAGE (HERO + BACKGROUND VIDEO + INFINITE UNPAUSING VIDEO MARQUEE) -->
+  <section id="home" class="relative pt-28 pb-12 sm:pt-36 sm:pb-16 overflow-hidden min-h-[85vh] sm:min-h-[90vh] flex flex-col justify-center items-center">
     
     <!-- Background Video with Mobile Autoplay Support -->
     <video autoplay loop muted playsinline webkit-playsinline class="absolute inset-0 w-full h-full object-cover pointer-events-none z-0 opacity-40">
-      <source src="data/dark 01.mp4" type="video/mp4">
+      <source src="https://res.cloudinary.com/rnsdahcs/video/upload/v1789024831/dark_01_1_1.mp4" type="video/mp4">
     </video>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 w-full flex flex-col items-center">
       
       <!-- Status Badge -->
-      <div class="hero-badge inline-flex items-center gap-2 sm:gap-3 px-3.5 py-1.5 rounded-full bg-[#FF5500]/10 border border-[#FF5500]/30 backdrop-blur-md text-[11px] sm:text-xs md:text-sm text-[#FF5500] font-bold mb-5 sm:mb-6 max-w-full">
+      <div class="hero-badge inline-flex items-center justify-center gap-2 sm:gap-3 px-3.5 py-1.5 rounded-full bg-[#FF5500]/10 border border-[#FF5500]/30 backdrop-blur-md text-[11px] sm:text-xs md:text-sm text-[#FF5500] font-bold mb-5 sm:mb-6 max-w-full">
         <span class="pulse-dot-orange shrink-0"></span>
         <span class="truncate">SKY MEDIA AGENCY · NOW ACCEPTING CLIENTS</span>
         <i data-lucide="sparkles" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#FF5500] shrink-0"></i>
       </div>
 
       <!-- Hero Main Title -->
-      <h1 class="hero-title text-3xl sm:text-5xl md:text-6xl font-black tracking-tight max-w-5xl mx-auto leading-tight sm:leading-[1.1] mb-4 sm:mb-6 text-white">
+      <h1 class="hero-title text-3xl sm:text-5xl md:text-6xl font-black tracking-tight max-w-4xl mx-auto leading-tight sm:leading-[1.1] mb-4 sm:mb-6 text-white text-center">
         We Don't Just Edit Videos,<br>
         <span class="text-[#FF5500]">We Build Digital Empires.</span>
       </h1>
 
       <!-- Hero CTA Button -->
-      <div class="hero-cta-group flex justify-center mb-8 sm:mb-12">
+      <div class="hero-cta-group flex justify-center mb-8 sm:mb-12 w-full">
         <a href="#contact" class="px-7 sm:px-9 py-3.5 sm:py-4 rounded-full bg-[#FF5500] hover:bg-[#ff6611] text-slate-950 font-black text-sm sm:text-base hover:shadow-xl hover:shadow-[#FF5500]/30 hover:scale-105 transition-all flex items-center gap-2">
           <span>Get In Touch</span>
           <i data-lucide="arrow-right" class="w-4 h-4 sm:w-5 sm:h-5 text-slate-950"></i>
@@ -130,98 +163,67 @@
           <!-- Video Set 1 (Original) -->
           <div class="video-marquee-content flex gap-6 pr-6 shrink-0">
             
-            <!-- Video Card 1 -->
-            <div class="video-card glass-panel rounded-2xl sm:rounded-3xl overflow-hidden group">
-              <div class="relative aspect-video bg-slate-900 overflow-hidden">
-                <video autoplay loop muted playsinline webkit-playsinline class="video-player">
-                  <source src="data/creation1.mp4" type="video/mp4">
-                </video>
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
-                <span class="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 px-2.5 py-0.5 sm:py-1 rounded-full bg-black/70 text-[10px] sm:text-xs font-bold text-[#FF5500] border border-[#FF5500]/30">Viral Edit</span>
-              </div>
-              <div class="p-3 sm:p-4 text-left">
-                <h4 class="font-bold text-sm sm:text-base text-white group-hover:text-[#FF5500] transition-colors">Creator 2M+ Edit</h4>
-                <p class="text-[11px] sm:text-xs text-slate-400 mt-0.5 sm:mt-1">Short-form retention edit & motion graphics</p>
-              </div>
-            </div>
+       <!-- Video Card 1 -->
+<div class="video-card glass-panel rounded-2xl sm:rounded-3xl overflow-hidden group">
+  <div class="relative aspect-video bg-slate-900 overflow-hidden">
+    <video autoplay loop muted playsinline webkit-playsinline class="video-player w-full h-full object-cover pointer-events-none">
+      <source src="https://res.cloudinary.com/rnsdahcs/video/upload/v1789017251/creation1.mp4" type="video/mp4">
+    </video>
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+  </div>
+</div>
 
-            <!-- Video Card 2 -->
-            <div class="video-card glass-panel rounded-2xl sm:rounded-3xl overflow-hidden group">
-              <div class="relative aspect-video bg-slate-900 overflow-hidden">
-                <video autoplay loop muted playsinline webkit-playsinline class="video-player">
-                  <source src="data/creation2.mp4" type="video/mp4">
-                </video>
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
-                <span class="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 px-2.5 py-0.5 sm:py-1 rounded-full bg-black/70 text-[10px] sm:text-xs font-bold text-[#FF5500] border border-[#FF5500]/30">Commercial</span>
-              </div>
-              <div class="p-3 sm:p-4 text-left">
-                <h4 class="font-bold text-sm sm:text-base text-white group-hover:text-[#FF5500] transition-colors">Brand Product Launch</h4>
-                <p class="text-[11px] sm:text-xs text-slate-400 mt-0.5 sm:mt-1">Cinematic studio shooting & color grade</p>
-              </div>
-            </div>
+<!-- Video Card 2 -->
+<div class="video-card glass-panel rounded-2xl sm:rounded-3xl overflow-hidden group">
+  <div class="relative aspect-video bg-slate-900 overflow-hidden">
+    <video autoplay loop muted playsinline webkit-playsinline class="video-player w-full h-full object-cover pointer-events-none">
+      <source src="https://res.cloudinary.com/rnsdahcs/video/upload/v1789017239/creation2.mp4" type="video/mp4">
+    </video>
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+  </div>
+</div>
 
-            <!-- Video Card 3 -->
-            <div class="video-card glass-panel rounded-2xl sm:rounded-3xl overflow-hidden group">
-              <div class="relative aspect-video bg-slate-900 overflow-hidden">
-                <video autoplay loop muted playsinline webkit-playsinline class="video-player">
-                  <source src="data/creation3.mp4" type="video/mp4">
-                </video>
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
-                <span class="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 px-2.5 py-0.5 sm:py-1 rounded-full bg-black/70 text-[10px] sm:text-xs font-bold text-[#FF5500] border border-[#FF5500]/30">Docu-Series</span>
-              </div>
-              <div class="p-3 sm:p-4 text-left">
-                <h4 class="font-bold text-sm sm:text-base text-white group-hover:text-[#FF5500] transition-colors">YouTube Documentary</h4>
-                <p class="text-[11px] sm:text-xs text-slate-400 mt-0.5 sm:mt-1">Storytelling & sound design mix</p>
-              </div>
-            </div>
+<!-- Video Card 3 -->
+<div class="video-card glass-panel rounded-2xl sm:rounded-3xl overflow-hidden group">
+  <div class="relative aspect-video bg-slate-900 overflow-hidden">
+    <video autoplay loop muted playsinline webkit-playsinline class="video-player w-full h-full object-cover pointer-events-none">
+      <source src="https://res.cloudinary.com/rnsdahcs/video/upload/v1789016368/04_1.mp4" type="video/mp4">
+    </video>
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+  </div>
+</div>
 
-          </div>
+</div>
 
-          <!-- Duplicated Video Set for Seamless Loop -->
-          <div class="video-marquee-content flex gap-6 pr-6 shrink-0" aria-hidden="true">
-            
-            <div class="video-card glass-panel rounded-2xl sm:rounded-3xl overflow-hidden group">
-              <div class="relative aspect-video bg-slate-900 overflow-hidden">
-                <video autoplay loop muted playsinline webkit-playsinline class="video-player">
-                  <source src="data/creation1.mp4" type="video/mp4">
-                </video>
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
-                <span class="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 px-2.5 py-0.5 sm:py-1 rounded-full bg-black/70 text-[10px] sm:text-xs font-bold text-[#FF5500] border border-[#FF5500]/30">Viral Edit</span>
-              </div>
-              <div class="p-3 sm:p-4 text-left">
-                <h4 class="font-bold text-sm sm:text-base text-white group-hover:text-[#FF5500] transition-colors">Creator 2M+ Edit</h4>
-                <p class="text-[11px] sm:text-xs text-slate-400 mt-0.5 sm:mt-1">Short-form retention edit & motion graphics</p>
-              </div>
-            </div>
+<!-- Duplicated Video Set for Seamless Loop -->
+<div class="video-marquee-content flex gap-6 pr-6 shrink-0" aria-hidden="true">
 
-            <div class="video-card glass-panel rounded-2xl sm:rounded-3xl overflow-hidden group">
-              <div class="relative aspect-video bg-slate-900 overflow-hidden">
-                <video autoplay loop muted playsinline webkit-playsinline class="video-player">
-                  <source src="data/creation2.mp4" type="video/mp4">
-                </video>
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
-                <span class="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 px-2.5 py-0.5 sm:py-1 rounded-full bg-black/70 text-[10px] sm:text-xs font-bold text-[#FF5500] border border-[#FF5500]/30">Commercial</span>
-              </div>
-              <div class="p-3 sm:p-4 text-left">
-                <h4 class="font-bold text-sm sm:text-base text-white group-hover:text-[#FF5500] transition-colors">Brand Product Launch</h4>
-                <p class="text-[11px] sm:text-xs text-slate-400 mt-0.5 sm:mt-1">Cinematic studio shooting & color grade</p>
-              </div>
-            </div>
+<div class="video-card glass-panel rounded-2xl sm:rounded-3xl overflow-hidden group">
+  <div class="relative aspect-video bg-slate-900 overflow-hidden">
+    <video autoplay loop muted playsinline webkit-playsinline class="video-player w-full h-full object-cover pointer-events-none">
+      <source src="https://res.cloudinary.com/rnsdahcs/video/upload/v1789017251/creation1.mp4" type="video/mp4">
+    </video>
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+  </div>
+</div>
 
-            <div class="video-card glass-panel rounded-2xl sm:rounded-3xl overflow-hidden group">
-              <div class="relative aspect-video bg-slate-900 overflow-hidden">
-                <video autoplay loop muted playsinline webkit-playsinline class="video-player">
-                  <source src="data/creation3.mp4" type="video/mp4">
-                </video>
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
-                <span class="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 px-2.5 py-0.5 sm:py-1 rounded-full bg-black/70 text-[10px] sm:text-xs font-bold text-[#FF5500] border border-[#FF5500]/30">Docu-Series</span>
-              </div>
-              <div class="p-3 sm:p-4 text-left">
-                <h4 class="font-bold text-sm sm:text-base text-white group-hover:text-[#FF5500] transition-colors">YouTube Documentary</h4>
-                <p class="text-[11px] sm:text-xs text-slate-400 mt-0.5 sm:mt-1">Storytelling & sound design mix</p>
-              </div>
-            </div>
+<div class="video-card glass-panel rounded-2xl sm:rounded-3xl overflow-hidden group">
+  <div class="relative aspect-video bg-slate-900 overflow-hidden">
+    <video autoplay loop muted playsinline webkit-playsinline class="video-player w-full h-full object-cover pointer-events-none">
+      <source src="https://res.cloudinary.com/rnsdahcs/video/upload/v1789017239/creation2.mp4" type="video/mp4">
+    </video>
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+  </div>
+</div>
 
+<div class="video-card glass-panel rounded-2xl sm:rounded-3xl overflow-hidden group">
+  <div class="relative aspect-video bg-slate-900 overflow-hidden">
+    <video autoplay loop muted playsinline webkit-playsinline class="video-player w-full h-full object-cover pointer-events-none">
+      <source src="https://res.cloudinary.com/rnsdahcs/video/upload/v1789016368/04_1.mp4" type="video/mp4">
+    </video>
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+  </div>
+</div>
           </div>
 
         </div>
@@ -230,19 +232,18 @@
 
     </div>
   </section>
-
   <!-- PAGE 2: SERVICES SECTION (PERFECTLY ALIGNED LEFT 2 / RIGHT 2 CARDS + CLICKABLE LINKS) -->
-  <section id="services" class="py-12 sm:py-16 relative bg-slate-950/60 border-t border-slate-800/80 overflow-hidden">
+  <section id="services" class="pt-12 sm:pt-16 pb-6 sm:pb-8 relative bg-slate-950/60 border-t border-slate-800/80 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Header -->
       <div class="section-header text-center max-w-3xl mx-auto mb-8 sm:mb-12">
         <h2 class="text-xs font-bold text-[#FF5500] tracking-widest uppercase mb-2 sm:mb-3">Our Core Agency Services</h2>
         <h2 class="text-2xl sm:text-4xl md:text-5xl font-black tracking-tight text-white">
-         Sky Media <span class="text-[#FF5500]">Services</span> — 5 Years of Experience!
+         Sky Media <span class="text-[#FF5500]">Services</span> — 3 Years of Experience!
         </h2>
         <p class="text-slate-400 text-xs sm:text-sm mt-2 sm:mt-3 max-w-2xl mx-auto leading-relaxed">
-          Click or tap any service container below to explore portfolio videos, project samples, and strategy breakdown!
+          Click or tap any service container below to explore services - videos, project samples, and strategy breakdown!
         </p>
       </div>
 
@@ -352,7 +353,7 @@
               <img src="data/NIE_LOGO.jpg" alt="NEW INDIAN ERA" class="w-full h-full object-contain rounded-full">
             </div>
             <div class="font-bold text-[11px] sm:text-xs">NEW INDIAN ERA</div>
-            <div class="text-[9px] sm:text-[10px] text-[#FF5500] font-semibold">1.1M Subscribers</div>
+           
           </div>
 
           <div class="flex flex-col items-center gap-2 text-center text-white">
@@ -360,7 +361,6 @@
               <img src="data/ASC.jpg" alt="ABHISHEK SIR CHEMISTRY" class="w-full h-full object-contain rounded-full">
             </div>
             <div class="font-bold text-[11px] sm:text-xs">ABHISHEK SIR CHEMISTRY</div>
-            <div class="text-[9px] sm:text-[10px] text-[#FF5500] font-semibold">1.47M Subscribers</div>
           </div>
 
           <div class="flex flex-col items-center gap-2 text-center text-white">
@@ -368,7 +368,7 @@
               <img src="data/MARKET AGENCY.jpg" alt="ADVER AIM" class="w-full h-full object-contain rounded-full">
             </div>
             <div class="font-bold text-[11px] sm:text-xs">ADVER AIM</div>
-            <div class="text-[9px] sm:text-[10px] text-[#FF5500] font-semibold">50+ ADDS DELIVERED</div>
+           
           </div>
 
           <div class="flex flex-col items-center gap-2 text-center text-white">
@@ -376,7 +376,7 @@
               <img src="data/TMN.png" alt="TMN" class="w-full h-full object-cover rounded-full">
             </div>
             <div class="font-bold text-[11px] sm:text-xs">TMN</div>
-            <div class="text-[9px] sm:text-[10px] text-[#FF5500] font-semibold">170k Subscribers</div>
+          
           </div>
 
           <div class="flex flex-col items-center gap-2 text-center text-white">
@@ -384,7 +384,7 @@
               <img src="data/TEXTURE SALOON.jpg" alt="TEXTURE SALOON" class="w-full h-full object-contain rounded-full">
             </div>
             <div class="font-bold text-[11px] sm:text-xs">TEXTURE SALOON</div>
-            <div class="text-[9px] sm:text-[10px] text-[#FF5500] font-semibold">437k Subscribers</div>
+           
           </div>
 
           <div class="flex flex-col items-center gap-2 text-center text-white">
@@ -392,7 +392,7 @@
               <img src="data/salon_ministrylogo.jpg" alt="SALON MINISTRY" class="w-full h-full object-contain rounded-full">
             </div>
             <div class="font-bold text-[11px] sm:text-xs">SALON MINISTRY</div>
-            <div class="text-[9px] sm:text-[10px] text-[#FF5500] font-semibold">1.47M Subscribers</div>
+            
           </div>
 
           <div class="flex flex-col items-center gap-2 text-center text-white">
@@ -400,7 +400,7 @@
               <img src="data/SN_NAILZ.jpg" alt="SWAG NAILZ" class="w-full h-full object-contain rounded-full">
             </div>
             <div class="font-bold text-[11px] sm:text-xs">SWAG NAILZ</div>
-            <div class="text-[9px] sm:text-[10px] text-[#FF5500] font-semibold">1.47M Subscribers</div>
+            
           </div>
 
           <div class="flex flex-col items-center gap-2 text-center text-white">
@@ -408,7 +408,7 @@
               <img src="data/TRESTILO.jpg" alt="TRESTILO CLOTHING" class="w-full h-full object-contain rounded-full">
             </div>
             <div class="font-bold text-[11px] sm:text-xs">TRESTILO CLOTHING</div>
-            <div class="text-[9px] sm:text-[10px] text-[#FF5500] font-semibold">500k Subscribers</div>
+            
           </div>
 
           <div class="flex flex-col items-center gap-2 text-center text-white">
@@ -416,7 +416,7 @@
               <img src="data/GM.jpg" alt="GM REAL ESTATE" class="w-full h-full object-contain rounded-full">
             </div>
             <div class="font-bold text-[11px] sm:text-xs">GM REAL ESTATE</div>
-            <div class="text-[9px] sm:text-[10px] text-[#FF5500] font-semibold">250k Subscribers</div>
+            
           </div>
 
           <div class="flex flex-col items-center gap-2 text-center text-white">
@@ -424,7 +424,7 @@
               <img src="data/Prithu_homes.jpg" alt="PRITHU HOMES" class="w-full h-full object-contain rounded-full">
             </div>
             <div class="font-bold text-[11px] sm:text-xs">PRITHU HOMES</div>
-            <div class="text-[9px] sm:text-[10px] text-[#FF5500] font-semibold">1M Subscribers</div>
+            
           </div>
 
         </div>
@@ -437,7 +437,7 @@
               <img src="data/NIE_LOGO.jpg" alt="NEW INDIAN ERA" class="w-full h-full object-contain rounded-full">
             </div>
             <div class="font-bold text-[11px] sm:text-xs">NEW INDIAN ERA</div>
-            <div class="text-[9px] sm:text-[10px] text-[#FF5500] font-semibold">1.1M Subscribers</div>
+            
           </div>
 
           <div class="flex flex-col items-center gap-2 text-center text-white">
@@ -445,7 +445,7 @@
               <img src="data/ASC.jpg" alt="ABHISHEK SIR CHEMISTRY" class="w-full h-full object-contain rounded-full">
             </div>
             <div class="font-bold text-[11px] sm:text-xs">ABHISHEK SIR CHEMISTRY</div>
-            <div class="text-[9px] sm:text-[10px] text-[#FF5500] font-semibold">1.47M Subscribers</div>
+            
           </div>
 
           <div class="flex flex-col items-center gap-2 text-center text-white">
@@ -453,7 +453,7 @@
               <img src="data/MARKET AGENCY.jpg" alt="ADVER AIM" class="w-full h-full object-contain rounded-full">
             </div>
             <div class="font-bold text-[11px] sm:text-xs">ADVER AIM</div>
-            <div class="text-[9px] sm:text-[10px] text-[#FF5500] font-semibold">50+ ADDS DELIVERED</div>
+            
           </div>
 
           <div class="flex flex-col items-center gap-2 text-center text-white">
@@ -461,7 +461,7 @@
               <img src="data/TMN.png" alt="TMN" class="w-full h-full object-cover rounded-full">
             </div>
             <div class="font-bold text-[11px] sm:text-xs">TMN</div>
-            <div class="text-[9px] sm:text-[10px] text-[#FF5500] font-semibold">170k Subscribers</div>
+           
           </div>
 
           <div class="flex flex-col items-center gap-2 text-center text-white">
@@ -469,7 +469,7 @@
               <img src="data/TEXTURE SALOON.jpg" alt="TEXTURE SALOON" class="w-full h-full object-contain rounded-full">
             </div>
             <div class="font-bold text-[11px] sm:text-xs">TEXTURE SALOON</div>
-            <div class="text-[9px] sm:text-[10px] text-[#FF5500] font-semibold">437k Subscribers</div>
+           
           </div>
 
           <div class="flex flex-col items-center gap-2 text-center text-white">
@@ -477,7 +477,7 @@
               <img src="data/salon_ministrylogo.jpg" alt="SALON MINISTRY" class="w-full h-full object-contain rounded-full">
             </div>
             <div class="font-bold text-[11px] sm:text-xs">SALON MINISTRY</div>
-            <div class="text-[9px] sm:text-[10px] text-[#FF5500] font-semibold">1.47M Subscribers</div>
+           
           </div>
 
           <div class="flex flex-col items-center gap-2 text-center text-white">
@@ -485,7 +485,7 @@
               <img src="data/SN_NAILZ.jpg" alt="SWAG NAILZ" class="w-full h-full object-contain rounded-full">
             </div>
             <div class="font-bold text-[11px] sm:text-xs">SWAG NAILZ</div>
-            <div class="text-[9px] sm:text-[10px] text-[#FF5500] font-semibold">1.47M Subscribers</div>
+            
           </div>
 
           <div class="flex flex-col items-center gap-2 text-center text-white">
@@ -493,7 +493,7 @@
               <img src="data/TRESTILO.jpg" alt="TRESTILO CLOTHING" class="w-full h-full object-contain rounded-full">
             </div>
             <div class="font-bold text-[11px] sm:text-xs">TRESTILO CLOTHING</div>
-            <div class="text-[9px] sm:text-[10px] text-[#FF5500] font-semibold">500k Subscribers</div>
+            
           </div>
 
           <div class="flex flex-col items-center gap-2 text-center text-white">
@@ -501,7 +501,7 @@
               <img src="data/GM.jpg" alt="GM REAL ESTATE" class="w-full h-full object-contain rounded-full">
             </div>
             <div class="font-bold text-[11px] sm:text-xs">GM REAL ESTATE</div>
-            <div class="text-[9px] sm:text-[10px] text-[#FF5500] font-semibold">250k Subscribers</div>
+          
           </div>
 
           <div class="flex flex-col items-center gap-2 text-center text-white">
@@ -509,7 +509,7 @@
               <img src="data/Prithu_homes.jpg" alt="PRITHU HOMES" class="w-full h-full object-contain rounded-full">
             </div>
             <div class="font-bold text-[11px] sm:text-xs">PRITHU HOMES</div>
-            <div class="text-[9px] sm:text-[10px] text-[#FF5500] font-semibold">1M Subscribers</div>
+          
           </div>
 
         </div>
@@ -528,7 +528,7 @@
         <div class="flex overflow-hidden w-full relative">
           <div class="flex gap-4 sm:gap-6 animate-marquee shrink-0">
             
-<!-- <!-- Review 1 (Rating: 4.8) -->
+<!-- Review 1 (Rating: 4.8) -->
             <div class="w-[280px] sm:w-[340px] glass-panel text-white p-5 sm:p-6 rounded-2xl shadow-xl flex-shrink-0 border border-slate-700/60 bg-[#12141c]/90 flex flex-col justify-between">
               <div>
                 <div class="flex gap-1 mb-3 text-amber-400">
@@ -805,8 +805,8 @@
             <div class="w-10 h-10 rounded-xl bg-[#FF5500]/10 text-[#FF5500] flex items-center justify-center mb-4 sm:mb-6">
               <i data-lucide="eye" class="w-5 h-5"></i>
             </div>
-            <div class="text-3xl sm:text-4xl font-black mb-1 sm:mb-2 text-slate-950">50+</div>
-            <div class="font-bold text-xs sm:text-sm text-[#FF5500] mb-2">Happy Clients</div>
+            <div class="text-3xl sm:text-4xl font-black mb-1 sm:mb-2 text-slate-950">100+</div>
+            <div class="font-bold text-xs sm:text-sm text-[#FF5500] mb-2">Happy Clients Base Successful Campaigns</div>
             <p class="text-xs text-slate-600 leading-relaxed">Trusted by creators and brands worldwide to deliver exceptional results.</p>
           </div>
         </div>
@@ -817,7 +817,7 @@
             <div class="w-10 h-10 rounded-xl bg-[#FF5500]/10 text-[#FF5500] flex items-center justify-center mb-4 sm:mb-6">
               <i data-lucide="user-check" class="w-5 h-5"></i>
             </div>
-            <div class="text-3xl sm:text-4xl font-black mb-1 sm:mb-2 text-slate-950">100+</div>
+            <div class="text-3xl sm:text-4xl font-black mb-1 sm:mb-2 text-slate-950">285+</div>
             <div class="font-bold text-xs sm:text-sm text-[#FF5500] mb-2">Successful Campaigns</div>
             <p class="text-xs text-slate-600 leading-relaxed">Executed high-converting strategies that drive maximum engagement.</p>
           </div>
@@ -829,7 +829,7 @@
             <div class="w-10 h-10 rounded-xl bg-[#FF5500]/10 text-[#FF5500] flex items-center justify-center mb-4 sm:mb-6">
               <i data-lucide="trending-up" class="w-5 h-5"></i>
             </div>
-            <div class="text-3xl sm:text-4xl font-black mb-1 sm:mb-2 text-slate-950">+84%</div>
+            <div class="text-3xl sm:text-4xl font-black mb-1 sm:mb-2 text-slate-950">+142</div>
             <div class="font-bold text-xs sm:text-sm text-[#FF5500] mb-2">ROI Growth</div>
             <p class="text-xs text-slate-600 leading-relaxed">Maximizing revenue and accelerating performance through data-driven content.</p>
           </div>
@@ -841,7 +841,7 @@
             <div class="w-10 h-10 rounded-xl bg-[#FF5500]/10 text-[#FF5500] flex items-center justify-center mb-4 sm:mb-6">
               <i data-lucide="zap" class="w-5 h-5"></i>
             </div>
-            <div class="text-3xl sm:text-4xl font-black mb-1 sm:mb-2 text-slate-950">1000+</div>
+            <div class="text-3xl sm:text-4xl font-black mb-1 sm:mb-2 text-slate-950">3,450+</div>
             <div class="font-bold text-xs sm:text-sm text-[#FF5500] mb-2">Videos Produced</div>
             <p class="text-xs text-slate-600 leading-relaxed">High-retention cinematic edits built for viral reach across platforms.</p>
           </div>
@@ -863,36 +863,45 @@
           Behind The Scenes At <span class="text-[#FF5500]">Sky Media</span>
         </p>
       </div>
+<!-- BTS Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+  
+  <!-- Video 1 -->
+  <div class="relative w-full h-[340px] sm:h-[420px] md:h-[450px] rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-800 bg-slate-900 group">
+    <div class="absolute inset-0 w-full h-full overflow-hidden">
+      <video autoplay loop muted playsinline webkit-playsinline class="absolute inset-0 w-full h-full object-cover pointer-events-none scale-125">
+        <source src="https://res.cloudinary.com/rnsdahcs/video/upload/v1789014567/bts.1.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent pointer-events-none"></div>
+    <span class="absolute top-3 left-3 sm:top-4 sm:left-4 px-3 py-1 rounded-full bg-black/70 text-[10px] sm:text-xs font-bold text-[#FF5500] border border-[#FF5500]/30 z-10">Studio Shooting</span>
+  </div>
 
-      <!-- BTS Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-        
-        <!-- Video 1 -->
-        <div class="relative w-full h-[340px] sm:h-[420px] md:h-[450px] rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-800 bg-slate-900 group">
-          <video autoplay loop muted playsinline webkit-playsinline class="w-full h-full object-cover">
-            <source src="data/bts .1.mp4" type="video/mp4">
-          </video>
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
-          <span class="absolute top-3 left-3 sm:top-4 sm:left-4 px-3 py-1 rounded-full bg-black/70 text-[10px] sm:text-xs font-bold text-[#FF5500] border border-[#FF5500]/30 z-10">Studio Shooting</span>
-        </div>
+  <!-- Video 2 -->
+  <div class="relative w-full h-[340px] sm:h-[420px] md:h-[450px] rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-800 bg-slate-900 group">
+    <div class="absolute inset-0 w-full h-full overflow-hidden">
+      <video autoplay loop muted playsinline webkit-playsinline class="absolute inset-0 w-full h-full object-cover pointer-events-none scale-125">
+        <source src="https://res.cloudinary.com/rnsdahcs/video/upload/v1789014591/bts_02.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent pointer-events-none"></div>
+    <span class="absolute top-3 left-3 sm:top-4 sm:left-4 px-3 py-1 rounded-full bg-black/70 text-[10px] sm:text-xs font-bold text-[#FF5500] border border-[#FF5500]/30 z-10">Field Shoot</span>
+  </div>
 
-        <!-- Video 2 -->
-        <div class="relative w-full h-[340px] sm:h-[420px] md:h-[450px] rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-800 bg-slate-900 group">
-          <video autoplay loop muted playsinline webkit-playsinline class="w-full h-full object-cover">
-            <source src="data/bts 02.mp4" type="video/mp4">
-          </video>
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
-          <span class="absolute top-3 left-3 sm:top-4 sm:left-4 px-3 py-1 rounded-full bg-black/70 text-[10px] sm:text-xs font-bold text-[#FF5500] border border-[#FF5500]/30 z-10">Field Shoot</span>
-        </div>
+  <!-- Video 3 -->
+  <div class="relative w-full h-[340px] sm:h-[420px] md:h-[450px] rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-800 bg-slate-900 group">
+    <div class="absolute inset-0 w-full h-full overflow-hidden">
+      <video autoplay loop muted playsinline webkit-playsinline class="absolute inset-0 w-full h-full object-cover pointer-events-none scale-125">
+        <source src="https://res.cloudinary.com/rnsdahcs/video/upload/v1789014572/bts_03.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent pointer-events-none"></div>
+    <span class="absolute top-3 left-3 sm:top-4 sm:left-4 px-3 py-1 rounded-full bg-black/70 text-[10px] sm:text-xs font-bold text-[#FF5500] border border-[#FF5500]/30 z-10">Podcast Broll</span>
+  </div>
 
-        <!-- Video 3 -->
-        <div class="relative w-full h-[340px] sm:h-[420px] md:h-[450px] rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-800 bg-slate-900 group">
-          <video autoplay loop muted playsinline webkit-playsinline class="w-full h-full object-cover">
-            <source src="data/bts 03.mp4" type="video/mp4">
-          </video>
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
-          <span class="absolute top-3 left-3 sm:top-4 sm:left-4 px-3 py-1 rounded-full bg-black/70 text-[10px] sm:text-xs font-bold text-[#FF5500] border border-[#FF5500]/30 z-10">Podcast Broll</span>
-        </div>
+</div>
+
+</div>
 
       </div>
     </div>
@@ -915,11 +924,11 @@
       <!-- Stat Highlight Callout Boxes -->
       <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mb-10 sm:mb-12">
         <div class="px-6 py-4 sm:px-8 sm:py-6 rounded-2xl sm:rounded-3xl bg-[#FF5500] text-slate-950 font-black shadow-xl">
-          <div class="text-3xl sm:text-4xl font-extrabold">50M+</div>
+          <div class="text-3xl sm:text-4xl font-extrabold">215M+</div>
           <div class="text-[10px] sm:text-xs uppercase tracking-wider font-bold">Total Views Generated</div>
         </div>
         <div class="px-6 py-4 sm:px-8 sm:py-6 rounded-2xl sm:rounded-3xl bg-[#FF5500] text-slate-950 font-black shadow-xl">
-          <div class="text-3xl sm:text-4xl font-extrabold">50+</div>
+          <div class="text-3xl sm:text-4xl font-extrabold">100+</div>
           <div class="text-[10px] sm:text-xs uppercase tracking-wider font-bold">Global Business Scaled</div>
         </div>
       </div>
@@ -1022,9 +1031,11 @@
         <div>
           <label class="block text-xs font-bold text-slate-300 uppercase mb-1.5 sm:mb-2">Estimated Monthly Budget</label>
           <select name="budget" required class="w-full px-3.5 py-3 sm:px-4 sm:py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs sm:text-sm focus:outline-none focus:border-[#FF5500] transition-colors">
-            <option value="₹25,000 - ₹40,000">₹25,000 - ₹40,000 / month</option>
-            <option value="₹40,000 - ₹60,000">₹40,000 - ₹60,000 / month</option>
-            <option value="₹60,000 - ₹1,00,000+">₹60,000 - ₹1,00,000+ / month</option>
+            <option value="₹40,000 - ₹60,000">₹40k - ₹60k / month</option>
+            <option value="₹60,000 - ₹1,00,000+">₹60k - ₹1lakh / month</option>
+            <option value="₹1,00,000 - ₹1,50,000">₹1lakh - ₹1.5lakh / month</option>
+            <option value="₹2,00,000 - ₹4,00,000+">₹2lakh - ₹4lakh / month</option>
+            <option value="others+">Other</option>
           </select>
         </div>
 
