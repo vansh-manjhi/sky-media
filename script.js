@@ -167,3 +167,65 @@ document.addEventListener("DOMContentLoaded", function() {
     video.setAttribute('preload', 'metadata');
   });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const videos = document.querySelectorAll('video');
+
+  videos.forEach(video => {
+    // Forcefully mute for iOS/Android compliance
+    video.muted = true;
+    
+    const card = video.closest('.video-card');
+    const overlay = card ? card.querySelector('.video-overlay') : null;
+
+    // As soon as the video starts playing, fade out the custom poster overlay smoothly
+    video.addEventListener('playing', () => {
+      if (overlay) {
+        overlay.style.opacity = '0';
+        setTimeout(() => overlay.remove(), 700);
+      }
+    });
+
+    // Initial play trigger
+    video.play().catch(e => {
+      console.log("Autoplay waiting for touch interaction on iOS");
+    });
+  });
+
+  // Universal Fallback for iPhone/Safari: On first touch or click anywhere, play all videos and hide overlays
+  let played = false;
+  const triggerPlayOnInteraction = () => {
+    if (!played) {
+      videos.forEach(video => {
+        video.muted = true;
+        video.play().catch(err => {});
+        
+        // Also remove overlays immediately on interaction if still present
+        const card = video.closest('.video-card');
+        const overlay = card ? card.querySelector('.video-overlay') : null;
+        if (overlay) {
+          overlay.style.opacity = '0';
+          setTimeout(() => overlay.remove(), 700);
+        }
+      });
+      played = true;
+      window.removeEventListener('touchstart', triggerPlayOnInteraction);
+      window.removeEventListener('click', triggerPlayOnInteraction);
+    }
+  };
+
+  window.addEventListener('touchstart', triggerPlayOnInteraction, { once: true });
+  window.addEventListener('click', triggerPlayOnInteraction, { once: true });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const videos = document.querySelectorAll('video');
+  videos.forEach(video => {
+    video.muted = true;
+    video.play().catch(e => {
+      document.addEventListener('touchstart', () => {
+        video.play();
+      }, { once: true });
+    });
+  });
+});
